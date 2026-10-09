@@ -1,27 +1,32 @@
 :root {
-  /* Cores - Dark Theme Moderno com Acentos Vibrantes */
-  --bg-primary: #0b0f19;
-  --bg-secondary: #111827;
-  --bg-card: rgba(17, 24, 39, 0.75);
-  --bg-card-hover: rgba(31, 41, 55, 0.85);
-  
+  /* Identidade Visual Minimalista & Moderna: Preto Profundo e Azul Tecnológico */
+  --bg-primary: #080a0f;           /* Preto profundo com nuance sutil */
+  --bg-secondary: #0e131f;         /* Tom escuro para seções/blocos */
+  --bg-card: rgba(14, 19, 31, 0.7);/* Card com transparência e glassmorphism */
+  --bg-card-hover: rgba(20, 27, 45, 0.85);
+
   --border-color: rgba(255, 255, 255, 0.08);
-  --border-focus: #6366f1;
+  --border-subtle: rgba(59, 130, 246, 0.2);
+  --border-focus: #3b82f6;
 
-  --text-primary: #f9fafb;
-  --text-secondary: #9ca3af;
-  --text-muted: #6b7280;
+  --text-primary: #f8fafc;         /* Branco puro/claro */
+  --text-secondary: #94a3b8;       /* Cinza ardósia claro para legibilidade */
+  --text-muted: #64748b;
 
-  --accent-primary: #6366f1;
-  --accent-secondary: #8b5cf6;
-  --accent-glow: rgba(99, 102, 241, 0.25);
-  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+  /* Azul Principal & Acentos */
+  --accent-primary: #2563eb;       /* Azul Royal */
+  --accent-light: #3b82f6;         /* Azul Claro Elétrico */
+  --accent-cyan: #06b6d4;          /* Azul Ciano para brilho */
+  --accent-glow: rgba(37, 99, 235, 0.25);
+  --accent-glow-strong: rgba(59, 130, 246, 0.4);
+  --accent-gradient: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #06b6d4 100%);
+  --accent-gradient-subtle: linear-gradient(180deg, rgba(37, 99, 235, 0.15) 0%, transparent 100%);
 
   --success: #10b981;
   --error: #ef4444;
 
   /* Tipografia */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
   /* Espaçamentos */
@@ -31,21 +36,20 @@
   --space-lg: 1.5rem;
   --space-xl: 2rem;
   --space-2xl: 3rem;
-  --space-3xl: 5rem;
+  --space-3xl: 4.5rem;
 
   /* Raios e Bordas */
-  --radius-sm: 6px;
+  --radius-sm: 8px;
   --radius-md: 12px;
-  --radius-lg: 18px;
+  --radius-lg: 20px;
   --radius-full: 9999px;
 
-  /* Efeitos e Sombras */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 25px var(--accent-glow);
+  /* Sombras e Efeitos */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 30px -5px rgba(0, 0, 0, 0.7);
+  --shadow-blue: 0 0 30px rgba(37, 99, 235, 0.2);
 
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
