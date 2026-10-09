@@ -1,34 +1,25 @@
 import { PortfolioAPI } from "./api.js";
 
-// Dados estáticos de fallback caso a API ainda não tenha sido iniciada
+// Dados reais do currículo para exibição
 const DEFAULT_PROJECTS = [
   {
-    id: "api-gateway-service",
-    title: "Microservices API Gateway",
-    description: "Gateway resiliente construído em Node.js com controle de tráfego, cache e autenticação centralizada JWT.",
-    tags: ["Node.js", "Express", "REST API", "Microserviços"],
-    githubUrl: "https://github.com",
+    id: "sistema-monitoramento-ia",
+    title: "Sistema de Monitoramento e Análise com IA",
+    description: "Arquitetura corporativa desenvolvida de forma autônoma com web scraping e backend em FastAPI, integrando a Gemini API para análise de relevância inteligente e interface em React com Tailwind CSS.",
+    tags: ["Python", "FastAPI", "React", "Gemini API", "Tailwind CSS", "SQLite"],
+    githubUrl: "https://github.com/caioSiqueiraSantos",
     liveUrl: "#"
   },
   {
-    id: "high-perf-ecommerce",
-    title: "Plataforma Web Otimizada",
-    description: "Frontend com carregamento ultrarrápido, SEO técnico refinado, Schema.org integrado e acessibilidade plena.",
-    tags: ["JavaScript Vanilla", "HTML5", "CSS Grid & Flexbox", "SEO"],
-    githubUrl: "https://github.com",
-    liveUrl: "#"
-  },
-  {
-    id: "realtime-chat-dashboard",
-    title: "Dashboard de Métricas & Telemetria",
-    description: "Painel de controle com visualização em tempo real de requisições de API, latência e estatísticas do sistema.",
-    tags: ["Node.js", "REST", "Dashboard", "Acessibilidade"],
-    githubUrl: "https://github.com",
+    id: "loja-virtual-grafos",
+    title: "Loja Virtual com Motor de Recomendação",
+    description: "Aplicação web desenvolvida com React e lógica de grafos em JavaScript para calcular similaridade e recomendar jogos em tempo real com base na rede de preferências dos usuários.",
+    tags: ["React", "JavaScript", "Algoritmos em Grafos", "LocalStorage"],
+    githubUrl: "https://github.com/caioSiqueiraSantos",
     liveUrl: "#"
   }
 ];
 
-// Renderizar projetos
 function renderProjects(projects) {
   const container = document.getElementById("projects-container");
   if (!container) return;
@@ -42,7 +33,7 @@ function renderProjects(projects) {
     card.setAttribute("itemtype", "https://schema.org/SoftwareSourceCode");
 
     const tagsHtml = proj.tags
-      .map(tag => `<span class="tag">${tag}</span>`)
+      .map(tag => `<span class="project-tag">${tag}</span>`)
       .join("");
 
     card.innerHTML = `
@@ -53,9 +44,8 @@ function renderProjects(projects) {
       </div>
       <div class="project-links">
         <a href="${proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link" itemprop="codeRepository">
-          GitHub &rarr;
+          Ver no GitHub &rarr;
         </a>
-        ${proj.liveUrl && proj.liveUrl !== "#" ? `<a href="${proj.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link">Ver Demo &rarr;</a>` : ""}
       </div>
     `;
 
@@ -63,7 +53,6 @@ function renderProjects(projects) {
   });
 }
 
-// Configurar o envio do formulário de contato
 function setupContactForm() {
   const form = document.getElementById("contact-form");
   const alertBox = document.getElementById("form-alert");
@@ -78,21 +67,19 @@ function setupContactForm() {
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    // Feedback visual de carregamento
     submitBtn.disabled = true;
-    submitBtn.textContent = "Enviando mensagem...";
+    submitBtn.textContent = "Enviando...";
     alertBox.style.display = "none";
     alertBox.className = "alert-box";
 
     try {
       const response = await PortfolioAPI.submitContact({ name, email, message });
-      
       alertBox.textContent = response.message || "Mensagem enviada com sucesso!";
       alertBox.classList.add("alert-success");
       alertBox.style.display = "block";
       form.reset();
     } catch (err) {
-      alertBox.textContent = err.message || "Não foi possível enviar a mensagem. Verifique se o backend está ligado.";
+      alertBox.textContent = err.message || "Erro ao conectar com a API. Verifique se o servidor Node está em execução.";
       alertBox.classList.add("alert-error");
       alertBox.style.display = "block";
     } finally {
@@ -102,11 +89,9 @@ function setupContactForm() {
   });
 }
 
-// Inicialização principal
 document.addEventListener("DOMContentLoaded", async () => {
   setupContactForm();
 
-  // Tenta carregar os projetos da API; se falhar ou estiver offline, usa os dados estáticos
   const projects = await PortfolioAPI.getProjects();
   if (projects && projects.length > 0) {
     renderProjects(projects);

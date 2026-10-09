@@ -4,44 +4,40 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
-  padding: 0.75rem 1.4rem;
-  font-size: 0.925rem;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.9rem;
   font-weight: 500;
   border-radius: var(--radius-md);
   text-decoration: none;
   cursor: pointer;
   transition: all var(--transition-normal);
   border: 1px solid transparent;
-  outline: none;
 }
 
 .btn-primary {
-  background: var(--accent-gradient);
+  background: var(--accent-blue);
   color: #ffffff;
-  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.35);
 }
 
 .btn-primary:hover {
+  background: var(--accent-blue-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(59, 130, 246, 0.5);
-  filter: brightness(1.08);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.35);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.03);
+  background: transparent;
   color: var(--text-primary);
-  border-color: var(--border-color);
-  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
 }
 
 .btn-secondary:hover {
-  background: rgba(59, 130, 246, 0.1);
-  border-color: var(--accent-light);
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--accent-blue);
   transform: translateY(-2px);
 }
 
-/* Botões Sociais Específicos */
+/* Botões Sociais */
 .social-buttons {
   display: flex;
   align-items: center;
@@ -52,84 +48,119 @@
 .btn-social {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.65rem 1.15rem;
+  gap: 0.55rem;
+  padding: 0.6rem 1.1rem;
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-card);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
   font-size: 0.875rem;
   font-weight: 500;
   text-decoration: none;
-  transition: all var(--transition-normal);
+  transition: all var(--transition-fast);
 }
 
 .btn-social svg {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
   fill: currentColor;
-  transition: transform var(--transition-fast);
 }
 
 .btn-social:hover {
-  background: rgba(37, 99, 235, 0.15);
-  border-color: var(--accent-light);
+  background: #172032;
+  border-color: var(--accent-blue);
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
 }
 
-.btn-social:hover svg {
-  transform: scale(1.1);
-}
-
-/* Badges e Tags */
-.badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.35rem 0.85rem;
-  font-size: 0.78rem;
-  font-weight: 500;
-  border-radius: var(--radius-full);
-  background: rgba(37, 99, 235, 0.12);
-  color: #60a5fa;
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  letter-spacing: 0.01em;
-}
-
-.tag {
-  display: inline-block;
-  padding: 0.28rem 0.7rem;
-  font-size: 0.78rem;
-  font-family: var(--font-mono);
-  background: rgba(255, 255, 255, 0.03);
-  color: var(--text-secondary);
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-color);
-  transition: border-color var(--transition-fast);
-}
-
-.tag:hover {
-  border-color: var(--accent-light);
-  color: #ffffff;
-}
-
-/* Card Minimalista com Borda e Acento Azul sutil */
+/* Card Minimalista */
 .card {
   background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
   transition: all var(--transition-normal);
-  position: relative;
 }
 
 .card:hover {
-  border-color: rgba(59, 130, 246, 0.4);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg), 0 0 25px rgba(37, 99, 235, 0.18);
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+}
+
+/* Grid e Itens de Tecnologias com Logos Reais */
+.tech-groups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-xl);
+}
+
+.tech-group-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  transition: border-color var(--transition-fast);
+}
+
+.tech-group-card:hover {
+  border-color: var(--border-hover);
+}
+
+.tech-group-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tech-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tech-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0.85rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.tech-pill:hover {
+  background: rgba(59, 130, 246, 0.08);
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateX(4px);
+}
+
+.tech-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.tech-name {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Tags de Projetos (Minimalistas) */
+.project-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
 }
 
 /* Formulário de Contato */
@@ -142,7 +173,7 @@
 }
 
 .form-label {
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--text-secondary);
 }
@@ -150,23 +181,21 @@
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 0.85rem 1rem;
-  background: rgba(0, 0, 0, 0.4);
+  padding: 0.8rem 1rem;
+  background: #0b0e16;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   color: var(--text-primary);
   font-family: inherit;
-  font-size: 0.95rem;
-  transition: all var(--transition-fast);
+  font-size: 0.92rem;
   box-sizing: border-box;
+  transition: border-color var(--transition-fast);
 }
 
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
   border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
-  background: rgba(0, 0, 0, 0.6);
 }
 
 .form-textarea {
@@ -174,11 +203,11 @@
   min-height: 120px;
 }
 
-/* Notificação de Status */
+/* Notificação */
 .alert-box {
-  padding: 1rem;
+  padding: 0.9rem;
   border-radius: var(--radius-md);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   margin-top: 1rem;
   display: none;
 }

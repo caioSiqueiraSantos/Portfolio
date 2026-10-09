@@ -1,26 +1,24 @@
 :root {
-  /* Identidade Visual Minimalista & Moderna: Preto Profundo e Azul Tecnológico */
-  --bg-primary: #080a0f;           /* Preto profundo com nuance sutil */
-  --bg-secondary: #0e131f;         /* Tom escuro para seções/blocos */
-  --bg-card: rgba(14, 19, 31, 0.7);/* Card com transparência e glassmorphism */
-  --bg-card-hover: rgba(20, 27, 45, 0.85);
+  /* Identidade Visual Minimalista & Sofisticada: Preto & Azul */
+  --bg-primary: #090b10;
+  --bg-secondary: #0f131c;
+  --bg-card: #121824;
+  --bg-card-hover: #172032;
 
-  --border-color: rgba(255, 255, 255, 0.08);
-  --border-subtle: rgba(59, 130, 246, 0.2);
+  --border-color: rgba(255, 255, 255, 0.07);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(59, 130, 246, 0.4);
   --border-focus: #3b82f6;
 
-  --text-primary: #f8fafc;         /* Branco puro/claro */
-  --text-secondary: #94a3b8;       /* Cinza ardósia claro para legibilidade */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
   --text-muted: #64748b;
 
   /* Azul Principal & Acentos */
-  --accent-primary: #2563eb;       /* Azul Royal */
-  --accent-light: #3b82f6;         /* Azul Claro Elétrico */
-  --accent-cyan: #06b6d4;          /* Azul Ciano para brilho */
-  --accent-glow: rgba(37, 99, 235, 0.25);
-  --accent-glow-strong: rgba(59, 130, 246, 0.4);
-  --accent-gradient: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #06b6d4 100%);
-  --accent-gradient-subtle: linear-gradient(180deg, rgba(37, 99, 235, 0.15) 0%, transparent 100%);
+  --accent-blue: #3b82f6;
+  --accent-blue-hover: #2563eb;
+  --accent-cyan: #38bdf8;
+  --accent-glow: rgba(59, 130, 246, 0.15);
 
   --success: #10b981;
   --error: #ef4444;
@@ -30,8 +28,8 @@
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
   /* Espaçamentos */
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
+  --space-xs: 0.35rem;
+  --space-sm: 0.6rem;
   --space-md: 1rem;
   --space-lg: 1.5rem;
   --space-xl: 2rem;
@@ -39,17 +37,16 @@
   --space-3xl: 4.5rem;
 
   /* Raios e Bordas */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
   --radius-full: 9999px;
 
-  /* Sombras e Efeitos */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 12px 30px -5px rgba(0, 0, 0, 0.7);
-  --shadow-blue: 0 0 30px rgba(37, 99, 235, 0.2);
+  /* Sombras */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-blue: 0 0 25px rgba(59, 130, 246, 0.15);
 
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
