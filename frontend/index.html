@@ -89,14 +89,23 @@
       </a>
       <nav aria-label="Navegação Principal">
         <ul class="nav-links">
-          <li><a href="#about" class="nav-link">Sobre</a></li>
+          <li><a href="#about-me" class="nav-link">Sobre Mim</a></li>
+          <li><a href="#services" class="nav-link">Serviços</a></li>
           <li><a href="#technologies" class="nav-link">Tecnologias</a></li>
           <li><a href="#projects" class="nav-link">Projetos</a></li>
           <li><a href="#api" class="nav-link">API</a></li>
           <li><a href="#contact" class="nav-link">Contato</a></li>
         </ul>
       </nav>
-      <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Fale Comigo</a>
+      <div class="nav-actions">
+        <a href="assets/curriculo-caio-siqueira.pdf" download="Curriculo-Caio-Siqueira-Santos.pdf" class="btn btn-resume" id="btn-download-resume-nav" title="Baixar Currículo em formato PDF">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+          </svg>
+          <span>Currículo PDF</span>
+        </a>
+        <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Fale Comigo</a>
+      </div>
     </div>
   </header>
 
@@ -122,8 +131,15 @@
             <a href="#contact" class="btn btn-secondary">Entrar em Contato</a>
           </div>
 
-          <!-- Botões com Links do Currículo -->
-          <div class="social-buttons" aria-label="Perfis Profissionais">
+          <!-- Botões com Links do Currículo e Redes -->
+          <div class="social-buttons" aria-label="Perfis Profissionais e Currículo">
+            <a href="assets/curriculo-caio-siqueira.pdf" download="Curriculo-Caio-Siqueira-Santos.pdf" class="btn-social btn-resume" id="hero-resume-btn" title="Baixar Currículo em PDF">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+              </svg>
+              <span>Baixar Currículo (PDF)</span>
+            </a>
+
             <a href="https://github.com/caioSiqueiraSantos" target="_blank" rel="noopener noreferrer" class="btn-social"
               id="link-github">
               <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -150,6 +166,229 @@
             <img src="assets/img/profile.jpg" alt="Foto de Caio Siqueira Santos" class="profile-avatar" width="260"
               height="260" loading="eager">
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Sobre Mim Expandida -->
+    <section class="section" id="about-me">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Sobre Mim</h2>
+          <p class="section-subtitle">Engenharia de software, rigor técnico e foco em valor prático para o negócio.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Coluna 1: Narrativa Profissional Estratégica -->
+          <div class="about-narrative">
+            <p class="about-paragraph">
+              Sou estudante de <strong>Ciência da Computação</strong> com forte direcionamento para <strong>engenharia de backend</strong>, arquitetura de software e soluções web integradas. Encaro o desenvolvimento não apenas como escrita de código, mas como um mecanismo direto de eficiência operacional e escala de negócios.
+            </p>
+            <p class="about-paragraph">
+              Minha atuação prática concentra-se na concepção e implementação de <strong>APIs RESTful de alta performance</strong>, fluxos de automação de dados e integrações robustas entre camadas de banco de dados e interfaces modernas. Trabalho com pilhas consolidadas como <strong>Python</strong>, <strong>Node.js</strong>, <strong>C#</strong> e <strong>React</strong>, sempre priorizando princípios de <strong>Clean Code</strong>, desacoplamento e manutenibilidade a longo prazo.
+            </p>
+            <p class="about-paragraph">
+              Acredito no poder do <strong>aprendizado contínuo</strong> e na mentalidade analítica para desatar gargalos técnicos complexos. Seja projetando um microserviço, criando rotinas automatizadas de coleta de dados ou desenvolvendo interfaces reativas, meu compromisso é entregar software estável, documentado e pronto para produção.
+            </p>
+
+            <div class="hero-actions" style="margin-top: 0.5rem; margin-bottom: 0;">
+              <a href="assets/curriculo-caio-siqueira.pdf" download="Curriculo-Caio-Siqueira-Santos.pdf" class="btn btn-primary" id="about-download-resume">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                </svg>
+                Baixar Currículo Completo (PDF)
+              </a>
+              <a href="#services" class="btn btn-secondary">Conhecer Serviços</a>
+            </div>
+          </div>
+
+          <!-- Coluna 2: Pilares e Diferenciais -->
+          <div class="about-highlights-grid">
+            <div class="highlight-card">
+              <div class="highlight-badge">Engenharia & Backend</div>
+              <h3 class="highlight-card-title">APIs RESTful & Dados</h3>
+              <p class="highlight-card-desc">
+                Criação de rotas seguras, modelagem relacional estruturada com PostgreSQL/MySQL e regras de negócio com testes e validações rigorosas.
+              </p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-badge">Automação & Processos</div>
+              <h3 class="highlight-card-title">Automações com Python</h3>
+              <p class="highlight-card-desc">
+                Desenvolvimento de scripts de integração, rotinas em segundo plano e web scrapers para eliminar tarefas manuais repetitivas.
+              </p>
+            </div>
+
+            <div class="highlight-card">
+              <div class="highlight-badge">Qualidade de Código</div>
+              <h3 class="highlight-card-title">Clean Code & Arquitetura Sólida</h3>
+              <p class="highlight-card-desc">
+                Código legível, modular e preparado para crescer sem criar débitos técnicos acumulados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Serviços / Foco Freelancer -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Serviços & Consultoria Freelance</h2>
+          <p class="section-subtitle">Soluções sob medida para startups, empresas e produtos digitais que exigem agilidade e qualidade técnica.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Serviço 1: MVPs -->
+          <article class="service-card" itemscope itemtype="https://schema.org/Service">
+            <div>
+              <div class="service-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-title" itemprop="name">Desenvolvimento de MVPs</h3>
+              <p class="service-desc" itemprop="description">
+                Transforme sua ideia ou modelo de negócio em um produto mínimo viável pronto para validação de mercado, com rapidez, estabilidade e arquitetura preparada para tração.
+              </p>
+              <ul class="service-deliverables">
+                <li class="service-deliverable-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Escopo ágil focado em validação
+                </li>
+                <li class="service-deliverable-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Arquitetura escalável desde o dia um
+                </li>
+                <li class="service-deliverable-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Entrega pontual com deploys funcionais
+                </li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, gostaria de solicitar um orçamento para desenvolvimento de um MVP: '; document.getElementById('message').focus();">
+              Solicitar MVP &rarr;
+            </a>
+          </article>
+
+          <!-- Serviço 2: APIs RESTful -->
+          <article class="service-card" itemscope itemtype="https://schema.org/Service">
+            <div>
+              <div class="service-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3 class="service-title" itemprop="name">APIs RESTful & Backend</h3>
+              <p class="service-desc" itemprop="description">
+                Construção de APIs seguras, padronizadas e documentadas com Python (FastAPI), Node.js ou C#, integradas com bancos relacionais e sistemas legados.
+              </p>
+              <ul class="service-deliverables">
+                <li class="service-deliverable-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Autenticação JWT e proteção de rotas
+                </li>
+                <li class="service-deliverable-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Modelagem SQL otimizada (PostgreSQL/MySQL)
+                </li>
+                <li class="service-deliverable-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Documentação Swagger/OpenAPI inclusa
+                </li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, preciso de desenvolvimento/integração de API RESTful: '; document.getElementById('message').focus();">
+              Contratar API &rarr;
+            </a>
+          </article>
+
+          <!-- Serviço 3: Automações em Python -->
+          <article class="service-card" itemscope itemtype="https://schema.org/Service">
+            <div>
+              <div class="service-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+              </div>
+              <h3 class="service-title" itemprop="name">Automações & Scripts Python</h3>
+              <p class="service-desc" itemprop="description">
+                Eliminação de tarefas manuais repetitivas, extração de dados da web (web scraping), integração entre plataformas e processamento inteligente de informações.
+              </p>
+              <ul class="service-deliverables">
+                <li class="service-deliverable-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Web scraping e pipelines de dados
+                </li>
+                <li class="service-deliverable-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Scripts de sincronização e automação
+                </li>
+                <li class="service-deliverable-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Redução de custos operacionais e tempo
+                </li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, preciso automatizar uma rotina/processo em Python: '; document.getElementById('message').focus();">
+              Automatizar Tarefas &rarr;
+            </a>
+          </article>
+
+          <!-- Serviço 4: Interfaces Web Modernas -->
+          <article class="service-card" itemscope itemtype="https://schema.org/Service">
+            <div>
+              <div class="service-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="service-title" itemprop="name">Interfaces Modernas em React</h3>
+              <p class="service-desc" itemprop="description">
+                Criação de painéis administrativos, dashboards e landing pages interativas com React e CSS moderno, 100% responsivas, rápidas e focadas na experiência do usuário.
+              </p>
+              <ul class="service-deliverables">
+                <li class="service-deliverable-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Design responsivo e alta performance
+                </li>
+                <li class="service-deliverable-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Componentização limpa e reutilizável
+                </li>
+                <li class="service-deliverable-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Integração fluida com APIs e estados
+                </li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, preciso de uma interface moderna em React: '; document.getElementById('message').focus();">
+              Criar Interface &rarr;
+            </a>
+          </article>
+        </div>
+
+        <!-- CTA Banner de Contratação -->
+        <div class="services-cta-banner">
+          <div>
+            <h3 class="services-cta-title">Tem um projeto ou demanda específica em mente?</h3>
+            <p class="services-cta-sub">
+              Vamos conversar sobre os objetivos técnicos e de negócio do seu produto. Avalio seu escopo e apresento a melhor abordagem para execução.
+            </p>
+          </div>
+          <a href="#contact" class="btn btn-primary" style="white-space: nowrap;">
+            Iniciar Conversa com Escopo &rarr;
+          </a>
         </div>
       </div>
     </section>
@@ -326,9 +565,17 @@
             </p>
 
             <div class="contact-actions-cluster">
-              <div class="social-buttons">
+              <div class="social-buttons" aria-label="Acesso Rápido e Redes Profissionais">
+                <a href="assets/curriculo-caio-siqueira.pdf" download="Curriculo-Caio-Siqueira-Santos.pdf"
+                  class="btn-social btn-resume" id="contact-resume-btn" title="Baixar Currículo em formato PDF">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                  </svg>
+                  <span>Baixar Currículo (PDF)</span>
+                </a>
+
                 <a href="https://github.com/caioSiqueiraSantos" target="_blank" rel="noopener noreferrer"
-                  class="btn-social">
+                  class="btn-social" id="contact-link-github" title="Acessar perfil no GitHub">
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
@@ -337,7 +584,7 @@
                 </a>
 
                 <a href="https://linkedin.com/in/caio-siqueira-santos" target="_blank" rel="noopener noreferrer"
-                  class="btn-social">
+                  class="btn-social" id="contact-link-linkedin" title="Acessar perfil no LinkedIn">
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -345,12 +592,12 @@
                   <span>LinkedIn</span>
                 </a>
 
-                <a href="mailto:caio.siqueira.dev@gmail.com" class="btn-social">
+                <a href="mailto:caio.siqueira.dev@gmail.com" class="btn-social" id="contact-link-email" title="Enviar e-mail direto">
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                   </svg>
-                  <span>E-mail</span>
+                  <span>caio.siqueira.dev@gmail.com</span>
                 </a>
               </div>
             </div>
