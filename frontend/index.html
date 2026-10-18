@@ -90,7 +90,7 @@
       <nav aria-label="Navegação Principal">
         <ul class="nav-links">
           <li><a href="#about-me" class="nav-link">Sobre Mim</a></li>
-          <li><a href="#services" class="nav-link">Serviços</a></li>
+          <li><a href="#services" class="nav-link">Soluções</a></li>
           <li><a href="#technologies" class="nav-link">Tecnologias</a></li>
           <li><a href="#projects" class="nav-link">Projetos</a></li>
           <li><a href="#api" class="nav-link">API</a></li>
@@ -98,9 +98,11 @@
         </ul>
       </nav>
       <div class="nav-actions">
-        <a href="assets/curriculo-caio-siqueira.pdf" download="Curriculo-Caio-Siqueira-Santos.pdf" class="btn btn-resume" id="btn-download-resume-nav" title="Baixar Currículo em formato PDF">
+        <a href="assets/curriculo-caio-siqueira.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-resume" id="btn-view-resume-nav" title="Visualizar Currículo em PDF numa nova aba">
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
           </svg>
           <span>Currículo PDF</span>
         </a>
@@ -133,11 +135,13 @@
 
           <!-- Botões com Links do Currículo e Redes -->
           <div class="social-buttons" aria-label="Perfis Profissionais e Currículo">
-            <a href="assets/curriculo-caio-siqueira.pdf" download="Curriculo-Caio-Siqueira-Santos.pdf" class="btn-social btn-resume" id="hero-resume-btn" title="Baixar Currículo em PDF">
+            <a href="assets/curriculo-caio-siqueira.pdf" target="_blank" rel="noopener noreferrer" class="btn-social btn-resume" id="hero-resume-view-btn" title="Visualizar Currículo em PDF numa nova aba">
               <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
-              <span>Baixar Currículo (PDF)</span>
+              <span>Ver Currículo (PDF)</span>
             </a>
 
             <a href="https://github.com/caioSiqueiraSantos" target="_blank" rel="noopener noreferrer" class="btn-social"
@@ -192,13 +196,15 @@
             </p>
 
             <div class="hero-actions" style="margin-top: 0.5rem; margin-bottom: 0;">
-              <a href="assets/curriculo-caio-siqueira.pdf" download="Curriculo-Caio-Siqueira-Santos.pdf" class="btn btn-primary" id="about-download-resume">
+              <a href="assets/curriculo-caio-siqueira.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="about-view-resume">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
                 </svg>
-                Baixar Currículo Completo (PDF)
+                Visualizar Currículo (PDF)
               </a>
-              <a href="#services" class="btn btn-secondary">Conhecer Serviços</a>
+              <a href="#services" class="btn btn-secondary">Conhecer Soluções</a>
             </div>
           </div>
 
@@ -232,16 +238,16 @@
       </div>
     </section>
 
-    <!-- Seção de Serviços / Foco Freelancer -->
+    <!-- Seção de Soluções & Competências Técnicas (Aberto para CLT, PJ e Projetos) -->
     <section class="section" id="services">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Serviços & Consultoria Freelance</h2>
-          <p class="section-subtitle">Soluções sob medida para startups, empresas e produtos digitais que exigem agilidade e qualidade técnica.</p>
+          <h2 class="section-title">Soluções & Competências Técnicas</h2>
+          <p class="section-subtitle">Capacidades práticas aplicadas ao desenvolvimento de software, preparadas para somar ao seu time de engenharia ou construir soluções do zero.</p>
         </div>
 
         <div class="services-grid">
-          <!-- Serviço 1: MVPs -->
+          <!-- Solução 1: MVPs e Produtos -->
           <article class="service-card" itemscope itemtype="https://schema.org/Service">
             <div>
               <div class="service-icon-wrapper" aria-hidden="true">
@@ -251,31 +257,31 @@
                   <polyline points="2 12 12 17 22 12"></polyline>
                 </svg>
               </div>
-              <h3 class="service-title" itemprop="name">Desenvolvimento de MVPs</h3>
+              <h3 class="service-title" itemprop="name">Desenvolvimento de MVPs & Produtos</h3>
               <p class="service-desc" itemprop="description">
-                Transforme sua ideia ou modelo de negócio em um produto mínimo viável pronto para validação de mercado, com rapidez, estabilidade e arquitetura preparada para tração.
+                Concepção e construção de produtos digitais, aplicações web completas e novas funcionalidades, com foco em agilidade, estabilidade e arquitetura preparada para tração.
               </p>
               <ul class="service-deliverables">
                 <li class="service-deliverable-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Escopo ágil focado em validação
+                  Desenvolvimento ágil orientado a entregas
                 </li>
                 <li class="service-deliverable-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Arquitetura escalável desde o dia um
+                  Arquitetura modular e escalável
                 </li>
                 <li class="service-deliverable-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Entrega pontual com deploys funcionais
+                  Entrega contínua e boas práticas de código
                 </li>
               </ul>
             </div>
-            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, gostaria de solicitar um orçamento para desenvolvimento de um MVP: '; document.getElementById('message').focus();">
-              Solicitar MVP &rarr;
+            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, gostaria de conversar sobre oportunidades/projetos em desenvolvimento de software: '; document.getElementById('message').focus();">
+              Conversar sobre Projetos &rarr;
             </a>
           </article>
 
-          <!-- Serviço 2: APIs RESTful -->
+          <!-- Solução 2: APIs RESTful -->
           <article class="service-card" itemscope itemtype="https://schema.org/Service">
             <div>
               <div class="service-icon-wrapper" aria-hidden="true">
@@ -286,9 +292,9 @@
                   <line x1="6" y1="18" x2="6.01" y2="18"></line>
                 </svg>
               </div>
-              <h3 class="service-title" itemprop="name">APIs RESTful & Backend</h3>
+              <h3 class="service-title" itemprop="name">APIs RESTful & Engenharia Backend</h3>
               <p class="service-desc" itemprop="description">
-                Construção de APIs seguras, padronizadas e documentadas com Python (FastAPI), Node.js ou C#, integradas com bancos relacionais e sistemas legados.
+                Construção de APIs seguras, padronizadas e documentadas com Python (FastAPI), Node.js ou C#, integradas com bancos relacionais e prontas para integrar sistemas.
               </p>
               <ul class="service-deliverables">
                 <li class="service-deliverable-item">
@@ -301,16 +307,16 @@
                 </li>
                 <li class="service-deliverable-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Documentação Swagger/OpenAPI inclusa
+                  Documentação OpenAPI/Swagger inclusa
                 </li>
               </ul>
             </div>
-            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, preciso de desenvolvimento/integração de API RESTful: '; document.getElementById('message').focus();">
-              Contratar API &rarr;
+            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, gostaria de conversar sobre backend e desenvolvimento de APIs: '; document.getElementById('message').focus();">
+              Conversar sobre Backend &rarr;
             </a>
           </article>
 
-          <!-- Serviço 3: Automações em Python -->
+          <!-- Solução 3: Automações em Python -->
           <article class="service-card" itemscope itemtype="https://schema.org/Service">
             <div>
               <div class="service-icon-wrapper" aria-hidden="true">
@@ -319,9 +325,9 @@
                   <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
                 </svg>
               </div>
-              <h3 class="service-title" itemprop="name">Automações & Scripts Python</h3>
+              <h3 class="service-title" itemprop="name">Automações & Pipelines de Dados</h3>
               <p class="service-desc" itemprop="description">
-                Eliminação de tarefas manuais repetitivas, extração de dados da web (web scraping), integração entre plataformas e processamento inteligente de informações.
+                Eliminação de rotinas manuais repetitivas, extração de dados da web (web scraping), integração entre plataformas e processamento inteligente de informações.
               </p>
               <ul class="service-deliverables">
                 <li class="service-deliverable-item">
@@ -334,16 +340,16 @@
                 </li>
                 <li class="service-deliverable-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Redução de custos operacionais e tempo
+                  Otimização de processos operacionais
                 </li>
               </ul>
             </div>
-            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, preciso automatizar uma rotina/processo em Python: '; document.getElementById('message').focus();">
-              Automatizar Tarefas &rarr;
+            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, gostaria de conversar sobre automação e integração em Python: '; document.getElementById('message').focus();">
+              Conversar sobre Automação &rarr;
             </a>
           </article>
 
-          <!-- Serviço 4: Interfaces Web Modernas -->
+          <!-- Solução 4: Interfaces Web Modernas -->
           <article class="service-card" itemscope itemtype="https://schema.org/Service">
             <div>
               <div class="service-icon-wrapper" aria-hidden="true">
@@ -353,14 +359,14 @@
                   <line x1="12" y1="17" x2="12" y2="21"></line>
                 </svg>
               </div>
-              <h3 class="service-title" itemprop="name">Interfaces Modernas em React</h3>
+              <h3 class="service-title" itemprop="name">Interfaces Modernas com React</h3>
               <p class="service-desc" itemprop="description">
-                Criação de painéis administrativos, dashboards e landing pages interativas com React e CSS moderno, 100% responsivas, rápidas e focadas na experiência do usuário.
+                Criação de painéis administrativos, dashboards e aplicações reativas com React e CSS moderno, 100% responsivas, rápidas e focadas na experiência do usuário.
               </p>
               <ul class="service-deliverables">
                 <li class="service-deliverable-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Design responsivo e alta performance
+                  Design responsivo e acessível
                 </li>
                 <li class="service-deliverable-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -368,26 +374,26 @@
                 </li>
                 <li class="service-deliverable-item">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Integração fluida com APIs e estados
+                  Integração fluida com APIs REST
                 </li>
               </ul>
             </div>
-            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, preciso de uma interface moderna em React: '; document.getElementById('message').focus();">
-              Criar Interface &rarr;
+            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, gostaria de conversar sobre desenvolvimento frontend em React: '; document.getElementById('message').focus();">
+              Conversar sobre Frontend &rarr;
             </a>
           </article>
         </div>
 
-        <!-- CTA Banner de Contratação -->
+        <!-- CTA Banner Aberto a Vagas e Projetos -->
         <div class="services-cta-banner">
           <div>
-            <h3 class="services-cta-title">Tem um projeto ou demanda específica em mente?</h3>
+            <h3 class="services-cta-title">Buscando um desenvolvedor para seu time ou projeto?</h3>
             <p class="services-cta-sub">
-              Vamos conversar sobre os objetivos técnicos e de negócio do seu produto. Avalio seu escopo e apresento a melhor abordagem para execução.
+              Estou ativamente aberto a oportunidades profissionais (CLT / PJ) para somar em equipes de tecnologia, além de demandas pontuais e projetos sob medida.
             </p>
           </div>
           <a href="#contact" class="btn btn-primary" style="white-space: nowrap;">
-            Iniciar Conversa com Escopo &rarr;
+            Iniciar Conversa &rarr;
           </a>
         </div>
       </div>
@@ -556,22 +562,31 @@
           <div class="contact-info-side">
             <div class="contact-indicator-line"></div>
             <h2 class="contact-main-heading">Entre em <span class="highlight">Contato</span></h2>
-            <p class="contact-lead-sub">Tem um projeto em mente? Vamos construir juntos!</p>
+            <p class="contact-lead-sub">Aberto a oportunidades (CLT / PJ), parcerias e novos projetos.</p>
 
             <h3 class="contact-secondary-heading">Vamos trabalhar juntos?</h3>
             <p class="contact-text-body">
-              Aberto a novas oportunidades, colaborações e projetos inovadores. Se você tem uma ideia, proposta ou
-              precisa de alguém para agregar à sua equipe técnica, entre em contato!
+              Seja para integrar sua equipe técnica (vagas de estágio, júnior ou full stack) ou para planejar e executar uma solução sob medida, estou sempre à disposição para conversar sobre como posso agregar valor.
             </p>
 
             <div class="contact-actions-cluster">
               <div class="social-buttons" aria-label="Acesso Rápido e Redes Profissionais">
-                <a href="assets/curriculo-caio-siqueira.pdf" download="Curriculo-Caio-Siqueira-Santos.pdf"
-                  class="btn-social btn-resume" id="contact-resume-btn" title="Baixar Currículo em formato PDF">
+                <a href="assets/curriculo-caio-siqueira.pdf" target="_blank" rel="noopener noreferrer"
+                  class="btn-social btn-resume" id="contact-resume-view-btn" title="Visualizar Currículo em PDF numa nova aba">
                   <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Ver Currículo (PDF)</span>
+                </a>
+
+                <a href="assets/curriculo-caio-siqueira.pdf" download="Curriculo-Caio-Siqueira-Santos.pdf"
+                  class="btn-social" id="contact-resume-download-btn" title="Baixar Currículo em formato PDF">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 2;">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
                   </svg>
-                  <span>Baixar Currículo (PDF)</span>
+                  <span>Baixar (PDF)</span>
                 </a>
 
                 <a href="https://github.com/caioSiqueiraSantos" target="_blank" rel="noopener noreferrer"
@@ -621,7 +636,7 @@
                 <div class="form-group">
                   <label for="message" class="form-label">Mensagem</label>
                   <textarea id="message" name="message" class="form-textarea"
-                    placeholder="Me fale sobre seu projeto ou oportunidade..." required></textarea>
+                    placeholder="Conte sobre a oportunidade para seu time ou sobre seu projeto..." required></textarea>
                 </div>
 
                 <button type="submit" id="submit-btn" class="btn btn-primary btn-submit">
