@@ -225,8 +225,11 @@ body {
 
 .project-links {
   display: flex;
-  gap: var(--space-md);
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
   margin-top: auto;
+  padding-top: var(--space-xs);
 }
 
 .project-link {
@@ -234,11 +237,32 @@ body {
   color: var(--accent-blue);
   text-decoration: none;
   font-weight: 500;
-  transition: color var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all var(--transition-fast);
 }
 
 .project-link:hover {
   color: #ffffff;
+}
+
+.project-link-primary {
+  background: rgba(59, 130, 246, 0.12);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+.project-link-primary:hover {
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
 }
 
 /* Inspetor da API */

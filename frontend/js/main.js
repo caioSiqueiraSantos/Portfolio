@@ -5,18 +5,18 @@ const DEFAULT_PROJECTS = [
   {
     id: "sistema-monitoramento-ia",
     title: "Sistema de Monitoramento e Análise com IA",
-    description: "Arquitetura corporativa desenvolvida de forma autônoma com web scraping e backend em FastAPI, integrando a Gemini API para análise de relevância inteligente e interface em React com Tailwind CSS.",
+    description: "Arquitetura corporativa full stack desenvolvida com web scraping, backend assíncrono em FastAPI, integração com Gemini API para análise de relevância inteligente e interface reativa em React com Tailwind CSS.",
     tags: ["Python", "FastAPI", "React", "Gemini API", "Tailwind CSS", "SQLite"],
     githubUrl: "https://github.com/caioSiqueiraSantos",
     liveUrl: "#"
   },
   {
-    id: "loja-virtual-grafos",
-    title: "Loja Virtual com Motor de Recomendação",
-    description: "Aplicação web desenvolvida com React e lógica de grafos em JavaScript para calcular similaridade e recomendar jogos em tempo real com base na rede de preferências dos usuários.",
-    tags: ["React", "JavaScript", "Algoritmos em Grafos", "LocalStorage"],
-    githubUrl: "https://github.com/caioSiqueiraSantos",
-    liveUrl: "#"
+    id: "gameshop-grafos",
+    title: "GameShop — E-Commerce & Motor de Recomendação em Grafos",
+    description: "Plataforma completa de jogos digitais desenvolvida com React, Vite e Tailwind CSS, integrando modelagem matemática em Teoria dos Grafos. Implementa Busca em Largura (BFS) em profundidade 2 para sugerir amizades indiretas (amigos de amigos) e grafo bipartido com filtragem colaborativa para recomendar jogos por afinidade social. Inclui checkout interativo (PIX e Cartão de Crédito), biblioteca de jogos, avaliações comunitárias e painel administrativo.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Teoria dos Grafos", "BFS", "E-Commerce", "Algoritmos"],
+    githubUrl: "https://github.com/caioSiqueiraSantos/GameShop",
+    liveUrl: "https://game-shop-rho-beryl.vercel.app/"
   }
 ];
 
@@ -36,6 +36,26 @@ function renderProjects(projects) {
       .map(tag => `<span class="project-tag">${tag}</span>`)
       .join("");
 
+    const liveBtnHtml = proj.liveUrl && proj.liveUrl !== "#"
+      ? `<a href="${proj.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link project-link-primary" itemprop="url" title="Acessar aplicação online em produção">
+          <span>Acessar Projeto</span>
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>`
+      : "";
+
+    const githubBtnHtml = proj.githubUrl && proj.githubUrl !== "#"
+      ? `<a href="${proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link" itemprop="codeRepository" title="Ver código-fonte no repositório GitHub">
+          <span>Ver no GitHub</span>
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>`
+      : "";
+
     card.innerHTML = `
       <div class="project-header">
         <h3 class="project-title" itemprop="name">${proj.title}</h3>
@@ -43,9 +63,8 @@ function renderProjects(projects) {
         <div class="project-tags">${tagsHtml}</div>
       </div>
       <div class="project-links">
-        <a href="${proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link" itemprop="codeRepository">
-          Ver no GitHub &rarr;
-        </a>
+        ${liveBtnHtml}
+        ${githubBtnHtml}
       </div>
     `;
 
