@@ -73,28 +73,54 @@
   transform: translateY(-2px);
 }
 
-/* Pílula de Status / Disponibilidade no Contato */
+/* Pílula de Status / Disponibilidade no Hero e Contato */
+.hero-status-pill,
 .status-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  padding: 0.45rem 1rem;
+  padding: 0.38rem 0.95rem;
   border-radius: var(--radius-full);
-  background: rgba(59, 130, 246, 0.08);
-  border: 1px solid rgba(59, 130, 246, 0.25);
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.28);
   font-size: 0.82rem;
   font-weight: 500;
-  color: #93c5fd;
+  color: #a7f3d0;
   width: fit-content;
+  margin-bottom: var(--space-md);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all var(--transition-fast);
+}
+
+.hero-status-pill:hover,
+.status-pill:hover {
+  background: rgba(16, 185, 129, 0.14);
+  border-color: rgba(16, 185, 129, 0.45);
 }
 
 .status-dot {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: var(--accent-blue);
-  box-shadow: 0 0 8px var(--accent-blue);
+  background: #10b981;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.75);
+  animation: pulse-status 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+@keyframes pulse-status {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.85);
+    box-shadow: 0 0 2px rgba(16, 185, 129, 0.25);
+  }
+}
+
 
 /* Card Minimalista */
 .card {
@@ -597,4 +623,149 @@
     display: none;
   }
 }
+
+/* =========================================
+   BARRA DE MÉTRICAS TÉCNICAS NO HERO
+   ========================================= */
+.hero-stats-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: 0.9rem 1.35rem;
+  margin-top: var(--space-md);
+  background: rgba(18, 24, 36, 0.7);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  width: fit-content;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hero-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.hero-stat-number {
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.hero-stat-label {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.hero-stat-divider {
+  width: 1px;
+  height: 28px;
+  background: var(--border-color);
+}
+
+@media (max-width: 640px) {
+  .hero-stats-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+    width: 100%;
+    max-width: 100%;
+  }
+  .hero-stat-divider {
+    display: none;
+  }
+}
+
+/* =========================================
+   BOTÕES E WIDGET DO WHATSAPP
+   ========================================= */
+.btn-whatsapp:hover {
+  background: rgba(37, 211, 102, 0.12);
+  border-color: rgba(37, 211, 102, 0.45);
+  color: #4ade80;
+}
+
+.btn-whatsapp:hover svg {
+  fill: #4ade80;
+}
+
+/* Botão Flutuante de WhatsApp */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0b111a;
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 16px rgba(37, 211, 102, 0.25);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.floating-whatsapp svg {
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+  transition: transform var(--transition-fast);
+}
+
+.floating-whatsapp:hover {
+  transform: translateY(-3px) scale(1.06);
+  background: #111b28;
+  border-color: #25D366;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.7), 0 0 24px rgba(37, 211, 102, 0.4);
+}
+
+.floating-whatsapp:hover svg {
+  transform: scale(1.08);
+}
+
+/* Tooltip do WhatsApp Flutuante */
+.floating-whatsapp-tooltip {
+  position: absolute;
+  right: 62px;
+  white-space: nowrap;
+  background: #0d121c;
+  color: #f8fafc;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.45rem 0.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(8px);
+  transition: all var(--transition-fast);
+}
+
+.floating-whatsapp:hover .floating-whatsapp-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 480px) {
+  .floating-whatsapp-tooltip {
+    display: none;
+  }
+  .floating-whatsapp {
+    bottom: 20px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+  }
+}
+
 

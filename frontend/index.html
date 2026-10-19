@@ -39,38 +39,61 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Caio Siqueira Santos",
-    "jobTitle": "Desenvolvedor de Software Júnior | Full Stack",
-    "description": "Desenvolvedor Full Stack Júnior com experiência prática em Python, JavaScript, C# e React. Foco na criação de APIs RESTful, integração com bancos de dados e interfaces modernas.",
-    "url": "https://meu-portfolio.com/",
-    "image": "assets/img/profile.jpg",
-    "email": "caio.siqueira.dev@gmail.com",
-    "telephone": "+55-11-@caioSiqueiraSantos",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "São Paulo",
-      "addressRegion": "SP",
-      "addressCountry": "BR"
-    },
-    "sameAs": [
-      "https://github.com/caioSiqueiraSantos",
-      "https://linkedin.com/in/caio-siqueira-santos"
-    ],
-    "knowsAbout": [
-      "JavaScript",
-      "Python",
-      "C#",
-      "React.js",
-      "Node.js",
-      "FastAPI",
-      "Tailwind CSS",
-      "PostgreSQL",
-      "MySQL",
-      "SQLite",
-      "Docker",
-      "Git",
-      "RESTful APIs"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://meu-portfolio.com/#person",
+        "name": "Caio Siqueira Santos",
+        "jobTitle": "Desenvolvedor Full Stack",
+        "description": "Desenvolvedor Full Stack com experiência prática no desenvolvimento de soluções completas de ponta a ponta: interfaces modernas com React e Tailwind CSS, APIs RESTful estruturadas com Node.js, Python e C#, e bancos de dados relacionais.",
+        "url": "https://meu-portfolio.com/",
+        "image": "assets/img/profile.jpg",
+        "email": "caio.siqueira.dev@gmail.com",
+        "telephone": "+55-11-@caioSiqueiraSantos",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "sameAs": [
+          "https://github.com/caioSiqueiraSantos",
+          "https://linkedin.com/in/caio-siqueira-santos"
+        ],
+        "knowsAbout": [
+          "JavaScript",
+          "Python",
+          "C#",
+          "React.js",
+          "Node.js",
+          "FastAPI",
+          "Tailwind CSS",
+          "PostgreSQL",
+          "MySQL",
+          "SQLite",
+          "Docker",
+          "Git",
+          "RESTful APIs"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "Caio Siqueira Santos — Engenharia de Software & Desenvolvimento Full Stack",
+        "url": "https://meu-portfolio.com/",
+        "image": "assets/img/profile.jpg",
+        "description": "Desenvolvimento de APIs RESTful estruturadas, soluções web reativas com React, automações em Python e pipelines de dados com alta confiabilidade.",
+        "provider": { "@id": "https://meu-portfolio.com/#person" },
+        "telephone": "+55-11-@caioSiqueiraSantos",
+        "email": "caio.siqueira.dev@gmail.com",
+        "areaServed": "BR",
+        "serviceType": [
+          "Engenharia de Software",
+          "Desenvolvimento Backend & APIs RESTful",
+          "Desenvolvimento Frontend com React",
+          "Automações e Pipelines em Python",
+          "Modelagem e Integração de Bancos de Dados"
+        ]
+      }
     ]
   }
   </script>
@@ -98,7 +121,8 @@
         </ul>
       </nav>
       <div class="nav-actions">
-        <a href="assets/curriculo-caio-siqueira.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-resume" id="btn-view-resume-nav" title="Visualizar Currículo em PDF numa nova aba">
+        <a href="assets/curriculo-caio-siqueira.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-resume"
+          id="btn-view-resume-nav" title="Visualizar Currículo em PDF numa nova aba">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
             <polyline points="15 3 21 3 21 9"></polyline>
@@ -116,16 +140,19 @@
     <section class="section hero" id="about">
       <div class="container hero-grid">
         <div class="hero-content">
+          <!-- Badge de Disponibilidade Ativa -->
+          <div class="hero-status-pill">
+            <span class="status-dot"></span>
+            <span>Disponível para novas oportunidades &amp; projetos</span>
+          </div>
+
           <h1 class="hero-name">
             <span class="first-name">Caio</span> <span class="last-name">Siqueira Santos</span>
           </h1>
-          <p class="hero-role">Desenvolvedor de Software Júnior &bull; Full Stack</p>
+          <p class="hero-role">Desenvolvedor Full Stack</p>
 
           <p class="hero-bio">
-            Experiência prática na criação de soluções com <strong>Python</strong>, <strong>JavaScript</strong>,
-            <strong>C#</strong> e <strong>React</strong>. Foco no desenvolvimento de APIs RESTful estruturadas,
-            integração eficiente com bancos de dados e construção de interfaces funcionais aplicando Clean Code e
-            controle de versão.
+            Experiência prática no desenvolvimento de aplicações web completas de ponta a ponta. No <strong>Frontend</strong>, criação de interfaces modernas, responsivas e intuitivas com <strong>React</strong>, <strong>JavaScript/TypeScript</strong> e <strong>Tailwind CSS</strong>. No <strong>Backend</strong>, construção de APIs RESTful estruturadas, arquitetura resiliente e integração de bancos de dados com <strong>Node.js</strong>, <strong>Python</strong> e <strong>C#</strong>.
           </p>
 
           <div class="hero-actions">
@@ -135,7 +162,8 @@
 
           <!-- Botões com Links do Currículo e Redes -->
           <div class="social-buttons" aria-label="Perfis Profissionais e Currículo">
-            <a href="assets/curriculo-caio-siqueira.pdf" target="_blank" rel="noopener noreferrer" class="btn-social btn-resume" id="hero-resume-view-btn" title="Visualizar Currículo em PDF numa nova aba">
+            <a href="assets/curriculo-caio-siqueira.pdf" target="_blank" rel="noopener noreferrer"
+              class="btn-social btn-resume" id="hero-resume-view-btn" title="Visualizar Currículo em PDF numa nova aba">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
@@ -161,6 +189,34 @@
               </svg>
               <span>LinkedIn</span>
             </a>
+
+            <a href="https://wa.me/caioSiqueiraSantos?text=Ol%C3%A1%2C%20Caio!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."
+              target="_blank" rel="noopener noreferrer" class="btn-social btn-whatsapp" id="hero-whatsapp-btn"
+              title="Conversar diretamente pelo WhatsApp">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Métricas de Destaque Técnico -->
+          <div class="hero-stats-bar">
+            <div class="hero-stat-item">
+              <span class="hero-stat-number">+3</span>
+              <span class="hero-stat-label">Anos de Estudo &amp; Código</span>
+            </div>
+            <div class="hero-stat-divider" aria-hidden="true"></div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number">Ponta a Ponta</span>
+              <span class="hero-stat-label">Frontend &bull; Backend &bull; DB</span>
+            </div>
+            <div class="hero-stat-divider" aria-hidden="true"></div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number">Full Stack</span>
+              <span class="hero-stat-label">React &bull; Node &bull; Python &bull; C#</span>
+            </div>
           </div>
         </div>
 
@@ -179,25 +235,27 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Sobre Mim</h2>
-          <p class="section-subtitle">Engenharia de software, rigor técnico e foco em valor prático para o negócio.</p>
+          <p class="section-subtitle">Engenharia de software ponta a ponta: interfaces fluidas, backend resiliente e foco em valor prático para o negócio.</p>
         </div>
 
         <div class="about-grid">
           <!-- Coluna 1: Narrativa Profissional Estratégica -->
           <div class="about-narrative">
             <p class="about-paragraph">
-              Sou estudante de <strong>Ciência da Computação</strong> com forte direcionamento para <strong>engenharia de backend</strong>, arquitetura de software e soluções web integradas. Encaro o desenvolvimento não apenas como escrita de código, mas como um mecanismo direto de eficiência operacional e escala de negócios.
+              Sou estudante de <strong>Ciência da Computação</strong> com atuação voltada para o <strong>desenvolvimento Full Stack</strong>, integrando a engenharia de software com experiências web modernas e intuitivas. Encaro o desenvolvimento de forma holística: desde a componentização e usabilidade no frontend até a modelagem eficiente de dados e regras de negócio no backend.
             </p>
             <p class="about-paragraph">
-              Minha atuação prática concentra-se na concepção e implementação de <strong>APIs RESTful de alta performance</strong>, fluxos de automação de dados e integrações robustas entre camadas de banco de dados e interfaces modernas. Trabalho com pilhas consolidadas como <strong>Python</strong>, <strong>Node.js</strong>, <strong>C#</strong> e <strong>React</strong>, sempre priorizando princípios de <strong>Clean Code</strong>, desacoplamento e manutenibilidade a longo prazo.
+              No <strong>Frontend</strong>, construo Single Page Applications (SPAs) reativas, dinâmicas e responsivas utilizando <strong>React</strong>, <strong>TypeScript</strong>, <strong>JavaScript (ES6+)</strong> e <strong>Tailwind CSS</strong>, aplicando componentização modular e boa usabilidade. No <strong>Backend</strong>, projeto e implemento <strong>APIs RESTful</strong> sólidas com <strong>Node.js</strong>, <strong>Python (FastAPI)</strong> e <strong>C#</strong>, integradas a bancos de dados relacionais (PostgreSQL, MySQL, SQLite) e automações inteligentes.
             </p>
             <p class="about-paragraph">
-              Acredito no poder do <strong>aprendizado contínuo</strong> e na mentalidade analítica para desatar gargalos técnicos complexos. Seja projetando um microserviço, criando rotinas automatizadas de coleta de dados ou desenvolvendo interfaces reativas, meu compromisso é entregar software estável, documentado e pronto para produção.
+              Acredito no poder do <strong>Clean Code</strong>, desacoplamento e entrega contínua. Seja implementando algoritmos complexos (como recomendação em grafos), integrando IA generativa (Gemini API) ou construindo fluxos interativos de checkout, meu foco é entregar software estável, performático e pronto para produção.
             </p>
 
             <div class="hero-actions" style="margin-top: 0.5rem; margin-bottom: 0;">
-              <a href="assets/curriculo-caio-siqueira.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="about-view-resume">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <a href="assets/curriculo-caio-siqueira.pdf" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary" id="about-view-resume">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                   <polyline points="15 3 21 3 21 9"></polyline>
                   <line x1="10" y1="14" x2="21" y2="3"></line>
@@ -211,26 +269,26 @@
           <!-- Coluna 2: Pilares e Diferenciais -->
           <div class="about-highlights-grid">
             <div class="highlight-card">
-              <div class="highlight-badge">Engenharia & Backend</div>
-              <h3 class="highlight-card-title">APIs RESTful & Dados</h3>
+              <div class="highlight-badge">Frontend &amp; Experiência</div>
+              <h3 class="highlight-card-title">Interfaces Reativas &amp; UI</h3>
               <p class="highlight-card-desc">
-                Criação de rotas seguras, modelagem relacional estruturada com PostgreSQL/MySQL e regras de negócio com testes e validações rigorosas.
+                Criação de SPAs, dashboards e aplicações web responsivas com React e Tailwind CSS, focando em estados previsíveis, componentização e usabilidade fluida.
               </p>
             </div>
 
             <div class="highlight-card">
-              <div class="highlight-badge">Automação & Processos</div>
-              <h3 class="highlight-card-title">Automações com Python</h3>
+              <div class="highlight-badge">Backend &amp; Engenharia</div>
+              <h3 class="highlight-card-title">APIs RESTful &amp; Dados</h3>
               <p class="highlight-card-desc">
-                Desenvolvimento de scripts de integração, rotinas em segundo plano e web scrapers para eliminar tarefas manuais repetitivas.
+                Arquitetura de microsserviços e rotas seguras com Node.js, FastAPI e C#, modelagem relacional otimizada (PostgreSQL/MySQL/SQLite) e validações robustas.
               </p>
             </div>
 
             <div class="highlight-card">
-              <div class="highlight-badge">Qualidade de Código</div>
-              <h3 class="highlight-card-title">Clean Code & Arquitetura Sólida</h3>
+              <div class="highlight-badge">Integração Ponta a Ponta</div>
+              <h3 class="highlight-card-title">Full Stack &amp; Clean Code</h3>
               <p class="highlight-card-desc">
-                Código legível, modular e preparado para crescer sem criar débitos técnicos acumulados.
+                Conexão fluida entre camadas, pipelines em Python, integração com IA (Gemini API) e código limpo desacoplado para escala sustentável.
               </p>
             </div>
           </div>
@@ -243,11 +301,11 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Soluções & Competências Técnicas</h2>
-          <p class="section-subtitle">Capacidades práticas aplicadas ao desenvolvimento de software, preparadas para somar ao seu time de engenharia ou construir soluções do zero.</p>
+          <p class="section-subtitle">Soluções completas de ponta a ponta: da concepção de interfaces fluidas e reativas à engenharia de dados e arquiteturas resilientes de backend.</p>
         </div>
 
         <div class="services-grid">
-          <!-- Solução 1: MVPs e Produtos -->
+          <!-- Solução 1: MVPs e Produtos Full Stack -->
           <article class="service-card" itemscope itemtype="https://schema.org/Service">
             <div>
               <div class="service-icon-wrapper" aria-hidden="true">
@@ -257,31 +315,79 @@
                   <polyline points="2 12 12 17 22 12"></polyline>
                 </svg>
               </div>
-              <h3 class="service-title" itemprop="name">Desenvolvimento de MVPs & Produtos</h3>
+              <h3 class="service-title" itemprop="name">Aplicações Full Stack & MVPs</h3>
               <p class="service-desc" itemprop="description">
-                Concepção e construção de produtos digitais, aplicações web completas e novas funcionalidades, com foco em agilidade, estabilidade e arquitetura preparada para tração.
+                Concepção e construção de produtos digitais completos de ponta a ponta, unindo interfaces reativas a backends escaláveis, com agilidade e foco em viabilidade de mercado.
               </p>
               <ul class="service-deliverables">
                 <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Desenvolvimento ágil orientado a entregas
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Desenvolvimento integrado ponta a ponta
                 </li>
                 <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Arquitetura modular e escalável
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Arquitetura modular, limpa e escalável
                 </li>
                 <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Entrega contínua e boas práticas de código
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Deploy contínuo e boas práticas de código
                 </li>
               </ul>
             </div>
-            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, gostaria de conversar sobre oportunidades/projetos em desenvolvimento de software: '; document.getElementById('message').focus();">
+            <a href="#contact" class="btn btn-secondary service-cta-btn"
+              onclick="document.getElementById('message').value = 'Olá Caio, gostaria de conversar sobre oportunidades/projetos em desenvolvimento full stack: '; document.getElementById('message').focus();">
               Conversar sobre Projetos &rarr;
             </a>
           </article>
 
-          <!-- Solução 2: APIs RESTful -->
+          <!-- Solução 2: Frontend & Interfaces Modernas com React -->
+          <article class="service-card" itemscope itemtype="https://schema.org/Service">
+            <div>
+              <div class="service-icon-wrapper" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="service-title" itemprop="name">Interfaces Modernas com React</h3>
+              <p class="service-desc" itemprop="description">
+                Criação de Single Page Applications (SPAs), dashboards e portais com React, TypeScript e Tailwind CSS, 100% responsivos, fluidos e focados na usabilidade do usuário.
+              </p>
+              <ul class="service-deliverables">
+                <li class="service-deliverable-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Design responsivo, acessível e moderno
+                </li>
+                <li class="service-deliverable-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Componentização limpa e gerenciamento de estado
+                </li>
+                <li class="service-deliverable-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Integração fluida e reativa com APIs REST
+                </li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn btn-secondary service-cta-btn"
+              onclick="document.getElementById('message').value = 'Olá Caio, gostaria de conversar sobre desenvolvimento frontend em React: '; document.getElementById('message').focus();">
+              Conversar sobre Frontend &rarr;
+            </a>
+          </article>
+
+          <!-- Solução 3: APIs RESTful & Backend -->
           <article class="service-card" itemscope itemtype="https://schema.org/Service">
             <div>
               <div class="service-icon-wrapper" aria-hidden="true">
@@ -294,92 +400,75 @@
               </div>
               <h3 class="service-title" itemprop="name">APIs RESTful & Engenharia Backend</h3>
               <p class="service-desc" itemprop="description">
-                Construção de APIs seguras, padronizadas e documentadas com Python (FastAPI), Node.js ou C#, integradas com bancos relacionais e prontas para integrar sistemas.
+                Construção de APIs seguras, padronizadas e documentadas com Node.js, Python (FastAPI) ou C#, integradas com bancos relacionais e preparadas para escalabilidade.
               </p>
               <ul class="service-deliverables">
                 <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                   Autenticação JWT e proteção de rotas
                 </li>
                 <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                   Modelagem SQL otimizada (PostgreSQL/MySQL)
                 </li>
                 <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                   Documentação OpenAPI/Swagger inclusa
                 </li>
               </ul>
             </div>
-            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, gostaria de conversar sobre backend e desenvolvimento de APIs: '; document.getElementById('message').focus();">
+            <a href="#contact" class="btn btn-secondary service-cta-btn"
+              onclick="document.getElementById('message').value = 'Olá Caio, gostaria de conversar sobre backend e desenvolvimento de APIs: '; document.getElementById('message').focus();">
               Conversar sobre Backend &rarr;
             </a>
           </article>
 
-          <!-- Solução 3: Automações em Python -->
+          <!-- Solução 4: Automações & Pipelines de Dados -->
           <article class="service-card" itemscope itemtype="https://schema.org/Service">
             <div>
               <div class="service-icon-wrapper" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
                   <circle cx="12" cy="12" r="3"></circle>
-                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                  <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                  </path>
                 </svg>
               </div>
               <h3 class="service-title" itemprop="name">Automações & Pipelines de Dados</h3>
               <p class="service-desc" itemprop="description">
-                Eliminação de rotinas manuais repetitivas, extração de dados da web (web scraping), integração entre plataformas e processamento inteligente de informações.
+                Eliminação de rotinas manuais repetitivas, extração de dados da web (web scraping), integração entre
+                plataformas e processamento inteligente de informações com IA.
               </p>
               <ul class="service-deliverables">
                 <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                   Web scraping e pipelines de dados
                 </li>
                 <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                   Scripts de sincronização e automação
                 </li>
                 <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Otimização de processos operacionais
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Integrações de dados com IA generativa
                 </li>
               </ul>
             </div>
-            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, gostaria de conversar sobre automação e integração em Python: '; document.getElementById('message').focus();">
+            <a href="#contact" class="btn btn-secondary service-cta-btn"
+              onclick="document.getElementById('message').value = 'Olá Caio, gostaria de conversar sobre automação e integração em Python: '; document.getElementById('message').focus();">
               Conversar sobre Automação &rarr;
-            </a>
-          </article>
-
-          <!-- Solução 4: Interfaces Web Modernas -->
-          <article class="service-card" itemscope itemtype="https://schema.org/Service">
-            <div>
-              <div class="service-icon-wrapper" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                  <line x1="8" y1="21" x2="16" y2="21"></line>
-                  <line x1="12" y1="17" x2="12" y2="21"></line>
-                </svg>
-              </div>
-              <h3 class="service-title" itemprop="name">Interfaces Modernas com React</h3>
-              <p class="service-desc" itemprop="description">
-                Criação de painéis administrativos, dashboards e aplicações reativas com React e CSS moderno, 100% responsivas, rápidas e focadas na experiência do usuário.
-              </p>
-              <ul class="service-deliverables">
-                <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Design responsivo e acessível
-                </li>
-                <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Componentização limpa e reutilizável
-                </li>
-                <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Integração fluida com APIs REST
-                </li>
-              </ul>
-            </div>
-            <a href="#contact" class="btn btn-secondary service-cta-btn" onclick="document.getElementById('message').value = 'Olá Caio, gostaria de conversar sobre desenvolvimento frontend em React: '; document.getElementById('message').focus();">
-              Conversar sobre Frontend &rarr;
             </a>
           </article>
         </div>
@@ -389,7 +478,8 @@
           <div>
             <h3 class="services-cta-title">Buscando um desenvolvedor para seu time ou projeto?</h3>
             <p class="services-cta-sub">
-              Estou ativamente aberto a oportunidades profissionais (CLT / PJ) para somar em equipes de tecnologia, além de demandas pontuais e projetos sob medida.
+              Estou ativamente aberto a oportunidades profissionais (CLT / PJ) para somar em equipes de tecnologia, além
+              de demandas pontuais e projetos sob medida.
             </p>
           </div>
           <a href="#contact" class="btn btn-primary" style="white-space: nowrap;">
@@ -528,7 +618,8 @@
           <!-- Projeto 1: Sistema de Monitoramento e Análise com IA -->
           <article class="card project-card" itemscope itemtype="https://schema.org/SoftwareSourceCode">
             <div class="project-media">
-              <img src="assets/img/project-monitoramento-ia.jpg" alt="Preview do projeto Sistema de Monitoramento e Análise com IA" class="project-img" loading="lazy">
+              <img src="assets/img/project-monitoramento-ia.jpg"
+                alt="Preview do projeto Sistema de Monitoramento e Análise com IA" class="project-img" loading="lazy">
               <div class="project-overlay"></div>
               <div class="project-badges">
                 <span class="project-badge badge-default">Pipeline & Analytics</span>
@@ -540,19 +631,30 @@
               </div>
               <h3 class="project-title" itemprop="name">Sistema de Monitoramento e Análise com IA</h3>
               <p class="project-desc" itemprop="description">
-                Arquitetura corporativa full stack desenvolvida do zero com web scraping, backend assíncrono em FastAPI, integração com Gemini API para análise de relevância inteligente e interface reativa em React com Tailwind CSS.
+                Arquitetura corporativa full stack desenvolvida do zero com web scraping, backend assíncrono em FastAPI,
+                integração com Gemini API para análise de relevância inteligente e interface reativa em React com
+                Tailwind CSS.
               </p>
               <ul class="project-highlights">
                 <li class="project-highlight-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                   <span>Web scraping automatizado com processamento assíncrono de dados</span>
                 </li>
                 <li class="project-highlight-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                   <span>Análise semântica e classificação inteligente com Gemini API</span>
                 </li>
                 <li class="project-highlight-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                   <span>Dashboard reativo em React com métricas e telemetria operacional</span>
                 </li>
               </ul>
@@ -562,12 +664,15 @@
                 <span class="project-tag">React</span>
                 <span class="project-tag">Gemini API</span>
                 <span class="project-tag">Tailwind CSS</span>
-                <span class="project-tag">SQLite</span>
+                <span class="project-tag">PostgreSQL</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/caioSiqueiraSantos" target="_blank" rel="noopener noreferrer" class="project-link project-link-secondary" itemprop="codeRepository" title="Ver código-fonte no repositório GitHub">
+                <a href="https://github.com/caioSiqueiraSantos" target="_blank" rel="noopener noreferrer"
+                  class="project-link project-link-secondary" itemprop="codeRepository"
+                  title="Ver código-fonte no repositório GitHub">
                   <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
                   </svg>
                   <span>Repositório</span>
                 </a>
@@ -578,7 +683,8 @@
           <!-- Projeto 2: GameShop — E-Commerce & Recomendação em Grafos -->
           <article class="card project-card" itemscope itemtype="https://schema.org/SoftwareSourceCode">
             <div class="project-media">
-              <img src="assets/img/project-gameshop.png" alt="Preview do projeto GameShop" class="project-img" loading="lazy">
+              <img src="assets/img/project-gameshop.png" alt="Preview do projeto GameShop" class="project-img"
+                loading="lazy">
               <div class="project-overlay"></div>
               <div class="project-badges">
                 <span class="project-badge badge-live">
@@ -593,19 +699,32 @@
               </div>
               <h3 class="project-title" itemprop="name">GameShop — E-Commerce & Motor de Recomendação em Grafos</h3>
               <p class="project-desc" itemprop="description">
-                Plataforma completa de jogos digitais desenvolvida com React, Vite e Tailwind CSS, integrando modelagem matemática em Teoria dos Grafos. Implementa Busca em Largura (BFS) em profundidade 2 para sugerir amizades indiretas (amigos de amigos) e grafo bipartido com filtragem colaborativa para recomendação de jogos por afinidade social. Conta com checkout interativo (PIX e Cartão de Crédito), biblioteca digital, avaliações comunitárias e painel administrativo.
+                Plataforma completa de jogos digitais desenvolvida com React, Vite e Tailwind CSS, integrando modelagem
+                matemática em Teoria dos Grafos. Implementa Busca em Largura (BFS) em profundidade 2 para sugerir
+                amizades indiretas (amigos de amigos) e grafo bipartido com filtragem colaborativa para recomendação de
+                jogos por afinidade social. Conta com checkout interativo (PIX e Cartão de Crédito), biblioteca digital,
+                avaliações comunitárias e painel administrativo.
               </p>
               <ul class="project-highlights">
                 <li class="project-highlight-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                   <span>Busca em Largura (BFS) em profundidade 2 para descobrir amigos de amigos</span>
                 </li>
                 <li class="project-highlight-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                   <span>Grafo bipartido com algoritmo de similaridade para recomendação de jogos</span>
                 </li>
                 <li class="project-highlight-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                   <span>Checkout completo com PIX Instantâneo e Cartão interativo GameShop Black</span>
                 </li>
               </ul>
@@ -619,17 +738,22 @@
                 <span class="project-tag">E-Commerce</span>
               </div>
               <div class="project-links">
-                <a href="https://game-shop-rho-beryl.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link project-link-primary" itemprop="url" title="Acessar aplicação online em produção">
+                <a href="https://game-shop-rho-beryl.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  class="project-link project-link-primary" itemprop="url" title="Acessar aplicação online em produção">
                   <span>Acessar Projeto</span>
-                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
                     <line x1="10" y1="14" x2="21" y2="3"></line>
                   </svg>
                 </a>
-                <a href="https://github.com/caioSiqueiraSantos/GameShop" target="_blank" rel="noopener noreferrer" class="project-link project-link-secondary" itemprop="codeRepository" title="Ver código-fonte no repositório GitHub">
+                <a href="https://github.com/caioSiqueiraSantos/GameShop" target="_blank" rel="noopener noreferrer"
+                  class="project-link project-link-secondary" itemprop="codeRepository"
+                  title="Ver código-fonte no repositório GitHub">
                   <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
                   </svg>
                   <span>Repositório</span>
                 </a>
@@ -646,7 +770,7 @@
         <div class="section-header">
           <h2 class="section-title">API REST do Portfolio</h2>
           <p class="section-subtitle">
-            Acesso padronizado a dados em JSON para automações, scrapers e recrutadores.
+            Camada de dados em Node.js integrada que alimenta a aplicação e disponibiliza endpoints REST em JSON para testes e integrações.
           </p>
         </div>
 
@@ -676,13 +800,15 @@
 
             <h3 class="contact-secondary-heading">Vamos trabalhar juntos?</h3>
             <p class="contact-text-body">
-              Seja para integrar sua equipe técnica (vagas de estágio, júnior ou full stack) ou para planejar e executar uma solução sob medida, estou sempre à disposição para conversar sobre como posso agregar valor.
+              Seja para integrar sua equipe técnica (vagas de estágio, júnior ou full stack) ou para planejar e executar
+              uma solução sob medida, estou sempre à disposição para conversar sobre como posso agregar valor.
             </p>
 
             <div class="contact-actions-cluster">
               <div class="social-buttons" aria-label="Acesso Rápido e Redes Profissionais">
                 <a href="assets/curriculo-caio-siqueira.pdf" target="_blank" rel="noopener noreferrer"
-                  class="btn-social btn-resume" id="contact-resume-view-btn" title="Visualizar Currículo em PDF numa nova aba">
+                  class="btn-social btn-resume" id="contact-resume-view-btn"
+                  title="Visualizar Currículo em PDF numa nova aba">
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
@@ -693,7 +819,8 @@
 
                 <a href="assets/curriculo-caio-siqueira.pdf" download="Curriculo-Caio-Siqueira-Santos.pdf"
                   class="btn-social" id="contact-resume-download-btn" title="Baixar Currículo em formato PDF">
-                  <svg viewBox="0 0 24 24" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 2;">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"
+                    style="fill: none; stroke: currentColor; stroke-width: 2;">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
                   </svg>
                   <span>Baixar (PDF)</span>
@@ -717,7 +844,18 @@
                   <span>LinkedIn</span>
                 </a>
 
-                <a href="mailto:caio.siqueira.dev@gmail.com" class="btn-social" id="contact-link-email" title="Enviar e-mail direto">
+                <a href="https://wa.me/caioSiqueiraSantos?text=Ol%C3%A1%2C%20Caio!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."
+                  target="_blank" rel="noopener noreferrer" class="btn-social btn-whatsapp" id="contact-link-whatsapp"
+                  title="Falar diretamente pelo WhatsApp">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                  </svg>
+                  <span>WhatsApp</span>
+                </a>
+
+                <a href="mailto:caio.siqueira.dev@gmail.com" class="btn-social" id="contact-link-email"
+                  title="Enviar e-mail direto">
                   <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
@@ -765,9 +903,20 @@
   <!-- Rodapé -->
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Caio Siqueira Santos &bull; Desenvolvedor Full Stack Júnior</p>
+      <p>&copy; 2026 Caio Siqueira Santos &bull; Desenvolvedor Full Stack</p>
     </div>
   </footer>
+
+  <!-- Botão Flutuante de Contato Rápido WhatsApp -->
+  <a href="https://wa.me/caioSiqueiraSantos?text=Ol%C3%A1%2C%20Caio!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar."
+    target="_blank" rel="noopener noreferrer" class="floating-whatsapp" id="floating-whatsapp"
+    aria-label="Falar com Caio no WhatsApp" title="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
+    <span class="floating-whatsapp-tooltip">Conversar no WhatsApp</span>
+  </a>
 
   <!-- Scripts -->
   <script type="module" src="js/main.js"></script>

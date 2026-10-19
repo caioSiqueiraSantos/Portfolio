@@ -14,7 +14,7 @@ const DEFAULT_PROJECTS = [
       "Análise semântica e classificação inteligente com Gemini API",
       "Dashboard reativo em React com métricas e telemetria operacional"
     ],
-    tags: ["Python", "FastAPI", "React", "Gemini API", "Tailwind CSS", "SQLite"],
+    tags: ["Python", "FastAPI", "React", "Gemini API", "Tailwind CSS", "PostgreSQL"],
     githubUrl: "https://github.com/caioSiqueiraSantos",
     liveUrl: "#"
   },
