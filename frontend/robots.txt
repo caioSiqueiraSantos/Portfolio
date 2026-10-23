@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://meu-portfolio.com/sitemap.xml
+Sitemap: https://caio-siqueira-santos.com.br/sitemap.xml

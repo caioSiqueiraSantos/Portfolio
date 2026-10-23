@@ -150,7 +150,8 @@ function setupContactForm() {
       alertBox.style.display = "block";
       form.reset();
     } catch (err) {
-      alertBox.textContent = err.message || "Erro ao conectar com a API. Verifique se o servidor Node está em execução.";
+      const encodedMsg = encodeURIComponent(`Olá, Caio! Meu nome é ${name} (${email}). ${message}`);
+      alertBox.innerHTML = `Não foi possível enviar via e-mail no momento. <a href="https://wa.me/5511966935424?text=${encodedMsg}" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; text-decoration: underline; font-weight: 600; display: inline-block; margin-top: 0.5rem;">👉 Clique aqui para me enviar via WhatsApp</a>`;
       alertBox.classList.add("alert-error");
       alertBox.style.display = "block";
     } finally {
