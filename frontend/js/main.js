@@ -122,8 +122,8 @@ function renderProjects(projects) {
   });
 }
 
-// Chave de acesso do Web3Forms (obtenha gratuitamente em https://web3forms.com digitando seu e-mail)
-const WEB3FORMS_ACCESS_KEY = "SUA_ACCESS_KEY_AQUI";
+// Chave de acesso do Web3Forms vinculada a caio.siqueira.dev@gmail.com
+const WEB3FORMS_ACCESS_KEY = "c4cf58ea-87c7-4572-b92d-30270eb6518a";
 
 function setupContactForm() {
   const form = document.getElementById("contact-form");
