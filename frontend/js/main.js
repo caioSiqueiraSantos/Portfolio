@@ -1,6 +1,4 @@
-import { PortfolioAPI } from "./api.js";
-
-// Dados reais do currículo para exibição
+// Dados dos projetos em destaque para renderização direta (sem necessidade de backend)
 const DEFAULT_PROJECTS = [
   {
     id: "sistema-monitoramento-ia",
@@ -124,6 +122,9 @@ function renderProjects(projects) {
   });
 }
 
+// Chave de acesso do Web3Forms (obtenha gratuitamente em https://web3forms.com digitando seu e-mail)
+const WEB3FORMS_ACCESS_KEY = "SUA_ACCESS_KEY_AQUI";
+
 function setupContactForm() {
   const form = document.getElementById("contact-form");
   const alertBox = document.getElementById("form-alert");
@@ -138,21 +139,59 @@ function setupContactForm() {
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
 
+    if (!name || !email || !message) {
+      alertBox.textContent = "Por favor, preencha todos os campos do formulário.";
+      alertBox.className = "alert-box alert-error";
+      alertBox.style.display = "block";
+      return;
+    }
+
+    if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === "SUA_ACCESS_KEY_AQUI") {
+      const encodedMsg = encodeURIComponent(`Olá, Caio! Meu nome é ${name} (${email}). ${message}`);
+      alertBox.innerHTML = `Configure sua chave do Web3Forms em <code>js/main.js</code> ou fale diretamente: <a href="https://wa.me/5511966935424?text=${encodedMsg}" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; text-decoration: underline; font-weight: 600; display: inline-block; margin-top: 0.5rem;">👉 Clique aqui para me enviar via WhatsApp</a>`;
+      alertBox.className = "alert-box alert-error";
+      alertBox.style.display = "block";
+      return;
+    }
+
     submitBtn.disabled = true;
     submitBtn.textContent = "Enviando...";
     alertBox.style.display = "none";
     alertBox.className = "alert-box";
 
     try {
-      const response = await PortfolioAPI.submitContact({ name, email, message });
-      alertBox.textContent = response.message || "Mensagem enviada com sucesso!";
-      alertBox.classList.add("alert-success");
-      alertBox.style.display = "block";
-      form.reset();
+      // Disparo direto para Web3Forms (HTTP API na porta 443 - instantâneo e sem backend)
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: name,
+          email: email,
+          message: message,
+          from_name: name,
+          subject: `🔔 Novo contato de ${name} pelo Portfólio`
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        alertBox.textContent = "Mensagem enviada com sucesso! Em breve entrarei em contato.";
+        alertBox.className = "alert-box alert-success";
+        alertBox.style.display = "block";
+        form.reset();
+      } else {
+        throw new Error(data.message || "Erro ao despachar formulário");
+      }
     } catch (err) {
+      console.warn("Envio de formulário indisponível:", err);
       const encodedMsg = encodeURIComponent(`Olá, Caio! Meu nome é ${name} (${email}). ${message}`);
       alertBox.innerHTML = `Não foi possível enviar via e-mail no momento. <a href="https://wa.me/5511966935424?text=${encodedMsg}" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; text-decoration: underline; font-weight: 600; display: inline-block; margin-top: 0.5rem;">👉 Clique aqui para me enviar via WhatsApp</a>`;
-      alertBox.classList.add("alert-error");
+      alertBox.className = "alert-box alert-error";
       alertBox.style.display = "block";
     } finally {
       submitBtn.disabled = false;
@@ -161,13 +200,7 @@ function setupContactForm() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
   setupContactForm();
-
-  const projects = await PortfolioAPI.getProjects();
-  if (projects && projects.length > 0) {
-    renderProjects(projects);
-  } else {
-    renderProjects(DEFAULT_PROJECTS);
-  }
+  renderProjects(DEFAULT_PROJECTS);
 });
