@@ -1,13 +1,20 @@
-# Portfolio Profissional — Caio Siqueira Santos
+# Portfólio Profissional — Caio Siqueira Santos | AI Engineer & Full Stack
 
-Portfólio moderno de Engenharia de Software e Desenvolvimento Full Stack, projetado para máxima performance, indexação por motores de busca (SEO / Schema.org), acessibilidade (a11y), arquitetura estática leve e entrega contínua via **GitHub Pages**.
+Portfólio técnico de **Engenharia de Inteligência Artificial (AI Engineering / GenAI)** e **Engenharia de Software Full Stack**, projetado para destacar a construção e operacionalização de soluções com **Large Language Models (LLMs / Google Gemini API)**, **Active Learning (Human-in-the-Loop)**, **Sistemas de Recomendação em Grafos**, pipelines de dados em **Python / FastAPI** e arquiteturas escaláveis.
 
-## 🚀 Tecnologias e Recursos
+## 🧠 Destaques em Engenharia de IA & GenAI
 
-- **Frontend**: HTML5 Semântico, CSS3 Moderno (Design System customizado com variáveis CSS, responsivo, dark mode), JavaScript Moderno (ES6+ modular).
-- **Formulário de Contato**: Integração serverless direta via **Web3Forms** (disparo instantâneo para e-mail sem necessidade de infraestrutura ou servidores dedicados).
-- **Deploy Automatizado**: GitHub Actions com pipeline de publicação direta no **GitHub Pages**.
-- **SEO & Metadados**: Open Graph, Twitter Cards, Schema.org (JSON-LD formatado para perfil pessoal/profissional), `robots.txt`, `sitemap.xml`.
+- **Orquestração de LLMs & Prompt Engineering**: Integração produtiva com Google Gemini API, extração de dados estruturados (JSON Schema), pré-filtragem léxica para otimização de tokens e controle de latência.
+- **Active Learning (Human-in-the-Loop)**: Arquitetura de *Feedback Engine* onde reclassificações e justificativas humanas alimentam a memória contextual do modelo (*Few-Shot Dinâmico*) para calibração contínua em produção.
+- **Sistemas de Recomendação & Teoria dos Grafos**: Implementação de Filtragem Colaborativa em Grafos Bipartidos (Usuário–Item) e Busca em Largura (BFS em profundidade 2) para ranqueamento de catálogo e descoberta por afinidade.
+- **AI Software Engineering**: Backends assíncronos e resilientes em **Python (FastAPI)**, **.NET 8 (C#)** e **Node.js**, persistência em **PostgreSQL**, containerização multi-stage com **Docker** e dashboards analíticos em **React 19 + TypeScript**.
+
+## 🚀 Tecnologias do Portfólio
+
+- **Frontend**: HTML5 Semântico, CSS3 Moderno (Design System dark mode com abas interativas de Engenharia de IA e filtro de projetos), JavaScript (ES6+ modular).
+- **Formulário de Contato**: Integração serverless direta via **Web3Forms**.
+- **Deploy Automatizado**: GitHub Actions com pipeline de publicação contínua no **GitHub Pages**.
+- **SEO & Dados Estruturados**: Open Graph, Twitter Cards, Schema.org (JSON-LD estruturado para AI Engineer), `robots.txt`, `sitemap.xml`.
 
 ## 📂 Estrutura do Projeto
 
@@ -20,12 +27,12 @@ Portfolio/
 │   ├── assets/             # Imagens e mídias dos projetos
 │   ├── css/                # Folhas de estilo modularizadas
 │   │   ├── variables.css   # Cores, tipografia, tokens de design
-│   │   ├── components.css  # Botões, cards, alertas
+│   │   ├── components.css  # Botões, cards, abas interativas de IA, alertas
 │   │   └── main.css        # Layouts e estilos gerais
 │   ├── js/
-│   │   └── main.js         # Renderização reativa e integração do formulário
+│   │   └── main.js         # Renderização reativa, abas de IA, filtros e formulário
 │   ├── CNAME               # Configuração do domínio customizado
-│   ├── index.html          # Interface principal com SEO e JSON-LD
+│   ├── index.html          # Interface principal focada em AI Engineering & GenAI
 │   ├── robots.txt          # Regras para robôs de busca
 │   └── sitemap.xml         # Mapa de URLs do site
 ├── .gitignore
@@ -34,10 +41,8 @@ Portfolio/
 
 ## 🛠️ Como Executar Localmente
 
-Você pode abrir o arquivo `frontend/index.html` diretamente no seu navegador ou utilizar uma extensão como o **Live Server** (VSCode / Antigravity) ou qualquer servidor local estático:
+Você pode abrir o arquivo `frontend/index.html` diretamente no seu navegador ou utilizar um servidor estático local:
 
 ```bash
-# Exemplo com npx serve ou Live Server:
 npx serve frontend
 ```
-
