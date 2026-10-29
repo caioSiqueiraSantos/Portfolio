@@ -1,36 +1,38 @@
 // Dados dos projetos em destaque para renderização direta (sem necessidade de backend)
 const DEFAULT_PROJECTS = [
   {
+    id: "buscador-editais-ia",
+    title: "Buscador de Editais & Triagem com IA (Google Gemini)",
+    category: "Full Stack, Pipeline de Dados & IA Generativa",
+    badge: "Pipeline & Active Learning",
+    image: "assets/img/project-buscador-editais.png",
+    description: "Plataforma completa para captura, pré-filtragem e triagem automatizada de editais e oportunidades de fomento à inovação (FINEP e órgãos públicos). Arquitetura de pipeline em Python com FastAPI, motor de análise semântica com Google GenAI (Gemini) e mecanismo de Human-in-the-Loop com Active Learning, onde a calibração de aderência e justificativas de descartes alimentam a memória do modelo para refinamento contínuo.",
+    highlights: [
+      "Pipeline modular com web scraping, APIs públicas (FINEP) e pré-filtragem para otimização de tokens",
+      "Triagem semântica via Gemini API para extração estruturada de resumos, prazos e níveis de aderência",
+      "Feedback Engine Human-in-the-Loop: reclassificação e calibração humana salvos como exemplos de aprendizado",
+      "Dashboard reativo em React 19 e Tailwind CSS com busca em tempo real, auditoria e CRUD de temas"
+    ],
+    tags: ["Python", "FastAPI", "Google GenAI", "Gemini API", "Active Learning", "React 19", "PostgreSQL", "Web Scraping", "Tailwind CSS"],
+    githubUrl: "https://github.com/caioSiqueiraSantos/Buscador-de-Editais",
+    liveUrl: ""
+  },
+  {
     id: "servicore",
     title: "ServiCore — Plataforma de Gestão para Prestadores de Serviços",
     category: "Full Stack & SaaS Corporativo",
-    badge: "Em Desenvolvimento",
-    image: "assets/img/project-servicore.jpg",
-    description: "Plataforma web concebida para centralizar a gestão operacional e financeira de autônomos e empresas de serviços. Arquitetura em monólito modular com .NET 8 (Domain-Driven Design, Value Objects monetários para precisão e testes automatizados) e frontend moderno em React 19 com Tailwind CSS v4 e TanStack Query.",
+    badge: "Docker & Cloud Ready",
+    image: "assets/img/project-servicore.png",
+    description: "Plataforma web concebida para centralizar a gestão operacional e financeira de autônomos e empresas de serviços. Arquitetura em monólito modular com .NET 8 (Domain-Driven Design, Value Objects monetários para precisão, testes automatizados e Docker Compose) e frontend moderno em React 19 com Tailwind CSS v4 e TanStack Query.",
     highlights: [
       "Backend modular em .NET 8 com Clean Architecture, EF Core e Value Object Money",
       "Frontend em React 19, TypeScript, Vite e Tailwind CSS v4 com design system Dark Mode",
-      "Gestão de clientes, workspaces, contratos, faturamento e auditoria operacional"
+      "Containerização completa com Docker multi-stage (.NET 8 + Nginx SPA) e Docker Compose (PostgreSQL 16)",
+      "Gestão de clientes, workspaces, contratos, faturamento, fluxo de caixa e trilha de auditoria"
     ],
-    tags: [".NET 8", "C#", "React 19", "TypeScript", "Tailwind CSS", "Entity Framework Core", "SQLite", "REST API"],
+    tags: [".NET 8", "C#", "React 19", "TypeScript", "Tailwind CSS", "Docker", "Docker Compose", "PostgreSQL", "SQLite", "EF Core"],
     githubUrl: "https://github.com/caioSiqueiraSantos/ServiCore",
     liveUrl: "" // Adicione aqui a URL após o deploy (ex: "https://servicore.vercel.app")
-  },
-  {
-    id: "sistema-monitoramento-ia",
-    title: "Sistema de Monitoramento e Análise com IA",
-    category: "Full Stack & Inteligência Artificial",
-    badge: "Pipeline & Analytics",
-    image: "assets/img/project-monitoramento-ia.jpg",
-    description: "Arquitetura corporativa full stack desenvolvida do zero com web scraping, backend assíncrono em FastAPI, integração com Gemini API para análise de relevância inteligente e interface reativa em React com Tailwind CSS.",
-    highlights: [
-      "Web scraping automatizado com processamento assíncrono de dados",
-      "Análise semântica e classificação inteligente com Gemini API",
-      "Dashboard reativo em React com métricas e telemetria operacional"
-    ],
-    tags: ["Python", "FastAPI", "React", "Gemini API", "Tailwind CSS", "PostgreSQL"],
-    githubUrl: "https://github.com/caioSiqueiraSantos",
-    liveUrl: ""
   },
   {
     id: "gameshop-grafos",
