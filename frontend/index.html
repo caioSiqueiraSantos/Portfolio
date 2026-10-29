@@ -579,13 +579,115 @@
 
     <!-- Seção de Projetos em Destaque -->
     <section class="section" id="projects">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Projetos em Destaque</h2>
-          <p class="section-subtitle">Soluções construídas com foco em código limpo, arquitetura e usabilidade.</p>
+      <div class="container projects-carousel-container">
+        <div class="projects-section-header">
+          <div class="projects-header-left">
+            <div class="projects-explore-pill">
+              <span class="explore-pulse-icon">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </span>
+              <span>Galeria de Projetos &bull; Deslize para explorar</span>
+            </div>
+            <h2 class="section-title">Projetos em Destaque</h2>
+            <p class="section-subtitle">Soluções completas com arquitetura resiliente, código limpo e foco em valor de negócio.</p>
+          </div>
+
+          <!-- Total Fixo de Projetos no Portfólio -->
+          <div class="projects-total-badge">
+            <span class="projects-count-number">03</span>
+            <span class="projects-count-label">Projetos em Produção &amp; Código Aberto</span>
+          </div>
         </div>
 
-        <div class="projects-grid" id="projects-container">
+        <div class="projects-carousel-wrapper">
+          <!-- Gradiente sutil indicador de mais conteúdo -->
+          <div class="carousel-edge-fade carousel-fade-right" id="carousel-edge-fade">
+            <span class="peek-hint-badge">
+              <span>Mais</span>
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </span>
+          </div>
+
+          <div class="projects-carousel-track" id="projects-container">
+          <!-- Projeto: ServiCore — Plataforma de Gestão para Prestadores de Serviços -->
+          <article class="card project-card" itemscope itemtype="https://schema.org/SoftwareSourceCode">
+            <div class="project-media">
+              <img src="assets/img/project-servicore.jpg"
+                alt="Preview do projeto ServiCore — Gestão para Prestadores de Serviços" class="project-img" loading="lazy">
+              <div class="project-overlay"></div>
+              <div class="project-badges">
+                <span class="project-badge badge-dev">
+                  <span class="status-dot-dev"></span>
+                  Em Desenvolvimento
+                </span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta-header">
+                <span class="project-category">Full Stack &amp; SaaS Corporativo</span>
+              </div>
+              <h3 class="project-title" itemprop="name">ServiCore — Plataforma de Gestão para Prestadores de Serviços</h3>
+              <p class="project-desc" itemprop="description">
+                Plataforma web concebida para centralizar a gestão operacional e financeira de autônomos e empresas de serviços. Arquitetura em monólito modular com .NET 8 (Domain-Driven Design, Value Objects monetários para precisão e testes automatizados) e frontend moderno em React 19 com Tailwind CSS v4 e TanStack Query.
+              </p>
+              <ul class="project-highlights">
+                <li class="project-highlight-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Backend modular em .NET 8 com Clean Architecture, EF Core e Value Object Money</span>
+                </li>
+                <li class="project-highlight-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Frontend em React 19, TypeScript, Vite e Tailwind CSS v4 com design system Dark Mode</span>
+                </li>
+                <li class="project-highlight-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Gestão de clientes, workspaces, contratos, faturamento e auditoria operacional</span>
+                </li>
+              </ul>
+              <div class="project-tags">
+                <span class="project-tag">.NET 8</span>
+                <span class="project-tag">C#</span>
+                <span class="project-tag">React 19</span>
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">Tailwind CSS</span>
+                <span class="project-tag">Entity Framework Core</span>
+                <span class="project-tag">SQLite</span>
+                <span class="project-tag">REST API</span>
+              </div>
+              <div class="project-links">
+                <button type="button" class="project-link project-link-disabled" title="Deploy em andamento — URL disponível em breve">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Deploy em Breve</span>
+                </button>
+                <a href="https://github.com/caioSiqueiraSantos/ServiCore" target="_blank" rel="noopener noreferrer"
+                  class="project-link project-link-secondary" itemprop="codeRepository"
+                  title="Ver código-fonte no repositório GitHub">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                  <span>Repositório</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
           <!-- Projeto 1: Sistema de Monitoramento e Análise com IA -->
           <article class="card project-card" itemscope itemtype="https://schema.org/SoftwareSourceCode">
             <div class="project-media">
@@ -731,6 +833,20 @@
               </div>
             </div>
           </article>
+          </div>
+        </div>
+
+        <!-- Indicadores Inferiores e Dica de Navegação -->
+        <div class="carousel-bottom-bar">
+          <!-- Indicadores / Dots do Carrossel -->
+          <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Indicadores dos projetos"></div>
+          <div class="carousel-drag-hint">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="6" y="3" width="12" height="18" rx="6"></rect>
+              <line x1="12" y1="7" x2="12" y2="11"></line>
+            </svg>
+            <span>Use o scroll horizontal ou arraste com o mouse</span>
+          </div>
         </div>
       </div>
     </section>

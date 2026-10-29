@@ -189,18 +189,224 @@ body {
   display: block;
 }
 
-/* Grid e Cards Estruturados de Projetos */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+/* Header Exclusivo da Seção de Projetos */
+.projects-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
   gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.projects-header-left {
+  max-width: 600px;
+}
+
+.projects-explore-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.explore-pulse-icon {
+  display: flex;
+  animation: pulseX 1.8s ease-in-out infinite;
+}
+
+@keyframes pulseX {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+
+/* Total Fixo de Projetos no Portfólio */
+.projects-total-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.55rem 1.1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.projects-count-number {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  line-height: 1;
+  padding-right: 0.85rem;
+  border-right: 1px solid var(--border-card);
+}
+
+.projects-count-label {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Wrapper do Carrossel com Efeito de Overflow / Peeking */
+.projects-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+/* Trilho com Barra de Scroll Personalizada para Usuários de Mouse */
+.projects-carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px 4px 22px 4px;
+  width: 100%;
+  cursor: grab;
+  user-select: none;
+
+  /* Barra de scroll customizada padrão moderno */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(56, 189, 248, 0.45) rgba(255, 255, 255, 0.05);
+}
+
+.projects-carousel-track:active {
+  cursor: grabbing;
+}
+
+/* Estilização da Barra de Scroll Webkit (Chrome, Edge, Safari) */
+.projects-carousel-track::-webkit-scrollbar {
+  height: 8px;
+  display: block;
+}
+
+.projects-carousel-track::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-full);
+  margin: 0 6px;
+}
+
+.projects-carousel-track::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.5), rgba(56, 189, 248, 0.7));
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background var(--transition-fast);
+}
+
+.projects-carousel-track::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+}
+
+/* Efeito PEEKING: Mostra 1 card inteiro e ~20-25% do próximo card para aguçar a curiosidade! */
+.projects-carousel-track .project-card {
+  flex: 0 0 540px;
+  max-width: 82%;
+  scroll-snap-align: start;
 }
 
 @media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
+  .projects-carousel-track .project-card {
+    flex: 0 0 85%;
+    max-width: 85%;
   }
+}
+
+@media (max-width: 480px) {
+  .projects-carousel-track .project-card {
+    flex: 0 0 88%;
+    max-width: 88%;
+  }
+}
+
+/* Gradiente indicador de mais conteúdo na borda direita */
+.carousel-edge-fade {
+  position: absolute;
+  top: 10px;
+  bottom: 30px;
+  right: 0;
+  width: 70px;
+  background: linear-gradient(90deg, rgba(9, 11, 16, 0) 0%, rgba(9, 11, 16, 0.85) 100%);
+  pointer-events: none;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 6px;
+  transition: opacity 0.3s ease;
+}
+
+.peek-hint-badge {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38bdf8;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  animation: pulseX 1.8s ease-in-out infinite;
+}
+
+/* Barra inferior: Dots e Dica com Ícone de Mouse */
+.carousel-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0;
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.carousel-dot.active {
+  width: 28px;
+  border-radius: var(--radius-full);
+  background: var(--accent-blue);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.65);
+}
+
+.carousel-drag-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
 }
 
 .project-card {
@@ -453,6 +659,37 @@ body {
   border-color: var(--accent-blue);
   color: #ffffff;
   transform: translateY(-2px);
+}
+
+.project-link-disabled {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-muted);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.project-link-disabled:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-muted);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: none;
+  box-shadow: none;
+}
+
+.badge-dev {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.status-dot-dev {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f59e0b;
+  box-shadow: 0 0 8px #f59e0b;
+  animation: pulseGlow 2s infinite ease-in-out;
 }
 
 /* Inspetor da API */

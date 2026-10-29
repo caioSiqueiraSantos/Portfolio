@@ -1,6 +1,22 @@
 // Dados dos projetos em destaque para renderização direta (sem necessidade de backend)
 const DEFAULT_PROJECTS = [
   {
+    id: "servicore",
+    title: "ServiCore — Plataforma de Gestão para Prestadores de Serviços",
+    category: "Full Stack & SaaS Corporativo",
+    badge: "Em Desenvolvimento",
+    image: "assets/img/project-servicore.jpg",
+    description: "Plataforma web concebida para centralizar a gestão operacional e financeira de autônomos e empresas de serviços. Arquitetura em monólito modular com .NET 8 (Domain-Driven Design, Value Objects monetários para precisão e testes automatizados) e frontend moderno em React 19 com Tailwind CSS v4 e TanStack Query.",
+    highlights: [
+      "Backend modular em .NET 8 com Clean Architecture, EF Core e Value Object Money",
+      "Frontend em React 19, TypeScript, Vite e Tailwind CSS v4 com design system Dark Mode",
+      "Gestão de clientes, workspaces, contratos, faturamento e auditoria operacional"
+    ],
+    tags: [".NET 8", "C#", "React 19", "TypeScript", "Tailwind CSS", "Entity Framework Core", "SQLite", "REST API"],
+    githubUrl: "https://github.com/caioSiqueiraSantos/ServiCore",
+    liveUrl: "" // Adicione aqui a URL após o deploy (ex: "https://servicore.vercel.app")
+  },
+  {
     id: "sistema-monitoramento-ia",
     title: "Sistema de Monitoramento e Análise com IA",
     category: "Full Stack & Inteligência Artificial",
@@ -14,7 +30,7 @@ const DEFAULT_PROJECTS = [
     ],
     tags: ["Python", "FastAPI", "React", "Gemini API", "Tailwind CSS", "PostgreSQL"],
     githubUrl: "https://github.com/caioSiqueiraSantos",
-    liveUrl: "#"
+    liveUrl: ""
   },
   {
     id: "gameshop-grafos",
@@ -50,11 +66,23 @@ function renderProjects(projects) {
       .map(tag => `<span class="project-tag">${tag}</span>`)
       .join("");
 
-    const isLive = proj.liveUrl && proj.liveUrl !== "#";
+    const isLive = proj.liveUrl && proj.liveUrl.trim() !== "" && proj.liveUrl !== "#";
+    const isDev = proj.badge && (proj.badge.toLowerCase().includes("desenvolvimento") || proj.badge.toLowerCase().includes("breve"));
+
+    let badgeClass = "badge-default";
+    let statusIndicator = "";
+
+    if (isLive) {
+      badgeClass = "badge-live";
+      statusIndicator = '<span class="status-dot"></span>';
+    } else if (isDev) {
+      badgeClass = "badge-dev";
+      statusIndicator = '<span class="status-dot-dev"></span>';
+    }
 
     const badgeHtml = proj.badge
-      ? `<span class="project-badge ${isLive ? 'badge-live' : 'badge-default'}">
-          ${isLive ? '<span class="status-dot"></span>' : ''}
+      ? `<span class="project-badge ${badgeClass}">
+          ${statusIndicator}
           ${proj.badge}
         </span>`
       : "";
@@ -81,7 +109,13 @@ function renderProjects(projects) {
             <line x1="10" y1="14" x2="21" y2="3"></line>
           </svg>
         </a>`
-      : "";
+      : `<button type="button" class="project-link project-link-disabled" title="Deploy em andamento — URL disponível em breve">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span>Deploy em Breve</span>
+        </button>`;
 
     const githubBtnHtml = proj.githubUrl && proj.githubUrl !== "#"
       ? `<a href="${proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link project-link-secondary" itemprop="codeRepository" title="Ver código-fonte no repositório GitHub">
@@ -120,6 +154,113 @@ function renderProjects(projects) {
 
     container.appendChild(card);
   });
+
+  initProjectsCarousel(projects.length);
+}
+
+function initProjectsCarousel(totalProjects) {
+  const track = document.getElementById("projects-container");
+  const dotsContainer = document.getElementById("carousel-dots");
+  const edgeFade = document.getElementById("carousel-edge-fade");
+
+  if (!track) return;
+
+  // Criação dos indicadores/dots
+  if (dotsContainer) {
+    dotsContainer.innerHTML = "";
+    for (let i = 0; i < totalProjects; i++) {
+      const dot = document.createElement("button");
+      dot.className = `carousel-dot ${i === 0 ? "active" : ""}`;
+      dot.setAttribute("type", "button");
+      dot.setAttribute("aria-label", `Ir para o projeto ${i + 1}`);
+      dot.addEventListener("click", () => {
+        const cards = track.querySelectorAll(".project-card");
+        if (cards[i]) {
+          cards[i].scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+        }
+      });
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function getCardWidth() {
+    const card = track.querySelector(".project-card");
+    if (!card) return 400;
+    const style = window.getComputedStyle(track);
+    const gap = parseFloat(style.gap) || 24;
+    return card.offsetWidth + gap;
+  }
+
+  function updateControls() {
+    const scrollLeft = track.scrollLeft;
+    const maxScroll = track.scrollWidth - track.clientWidth;
+
+    // Se estiver no final, oculta o indicador de "Mais" (edge fade)
+    if (edgeFade) {
+      edgeFade.style.opacity = scrollLeft >= maxScroll - 16 ? "0" : "1";
+    }
+
+    // Identificar card mais visível
+    const cardWidth = getCardWidth();
+    const activeIndex = Math.min(
+      totalProjects - 1,
+      Math.max(0, Math.round(scrollLeft / cardWidth))
+    );
+
+    // Atualiza dots
+    if (dotsContainer) {
+      const dots = dotsContainer.querySelectorAll(".carousel-dot");
+      dots.forEach((dot, idx) => {
+        if (idx === activeIndex) {
+          dot.classList.add("active");
+        } else {
+          dot.classList.remove("active");
+        }
+      });
+    }
+  }
+
+  // Permite rolar horizontalmente com a roda tradicional do mouse (sem precisar segurar Shift)
+  track.addEventListener("wheel", (e) => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      // Se a rolagem for predominantemente vertical, converte em rolagem horizontal do carrossel
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      if ((e.deltaY > 0 && track.scrollLeft < maxScroll) || (e.deltaY < 0 && track.scrollLeft > 0)) {
+        e.preventDefault();
+        track.scrollLeft += e.deltaY;
+      }
+    }
+  }, { passive: false });
+
+  // Arraste com o Mouse (Drag to Scroll)
+  let isDown = false;
+  let startX = 0;
+  let scrollLeftStart = 0;
+
+  track.addEventListener("mousedown", (e) => {
+    // Permite clicar em links normalmente se não arrastar
+    isDown = true;
+    startX = e.pageX - track.offsetLeft;
+    scrollLeftStart = track.scrollLeft;
+  });
+
+  window.addEventListener("mouseup", () => {
+    isDown = false;
+  });
+
+  track.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - track.offsetLeft;
+    const walk = (x - startX) * 1.5; // Velocidade do scroll
+    track.scrollLeft = scrollLeftStart - walk;
+  });
+
+  track.addEventListener("scroll", updateControls, { passive: true });
+  window.addEventListener("resize", updateControls);
+
+  // Inicializa estado imediato
+  setTimeout(updateControls, 100);
 }
 
 // Chave de acesso do Web3Forms vinculada a caio.siqueira.dev@gmail.com
