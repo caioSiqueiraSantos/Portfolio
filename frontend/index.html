@@ -599,6 +599,11 @@
                 <span class="tech-name">Docker &amp; Compose</span>
               </div>
               <div class="tech-pill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/n8n/n8n-original.svg" alt="n8n"
+                  class="tech-logo" loading="lazy">
+                <span class="tech-name">n8n (Agentes &amp; Workflows)</span>
+              </div>
+              <div class="tech-pill">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git & GitHub"
                   class="tech-logo" loading="lazy">
                 <span class="tech-name">Git &amp; GitHub Actions</span>
@@ -672,21 +677,16 @@
                   class="project-img" loading="lazy">
                 <div class="project-overlay"></div>
                 <div class="project-badges">
-                  <span class="project-badge badge-default">GenAI &amp; Active Learning</span>
+                  <span class="project-badge badge-default">Agentes &bull; n8n &bull; Docker &bull; Active Learning</span>
                 </div>
               </div>
               <div class="project-content">
                 <div class="project-meta-header">
-                  <span class="project-category">AI Engineering &bull; LLMs &bull; Active Learning &amp; FastAPI</span>
+                  <span class="project-category">AI Engineering &bull; Agentes &amp; Automação (n8n) &bull; LLMs &amp; Docker</span>
                 </div>
-                <h3 class="project-title" itemprop="name">Buscador de Editais &amp; Triagem Semântica com IA (Google
-                  Gemini)</h3>
+                <h3 class="project-title" itemprop="name">Buscador de Editais &amp; Agente de Triagem com IA (Gemini, n8n &amp; Docker)</h3>
                 <p class="project-desc" itemprop="description">
-                  Sistema inteligente de ponta a ponta para ingestão, pré-filtragem léxica e triagem semântica
-                  automatizada de editais de fomento à inovação (FINEP e órgãos públicos). Construído em Python e
-                  FastAPI, orquestra Large Language Models (Google Gemini API) para extração estruturada (JSON) e
-                  implementa um motor de Human-in-the-Loop com Active Learning, onde avaliações e justificativas humanas
-                  retroalimentam o contexto do LLM (Few-Shot Dinâmico) para calibrar continuamente a precisão do modelo.
+                  Sistema inteligente de ponta a ponta para ingestão multi-fonte (APIs públicas da FINEP e web scraping automatizado da FAPESP), pré-filtragem e triagem semântica de editais de fomento à inovação. Containerizado com <strong>Docker</strong> e orquestrado via workflows agendados no <strong>n8n</strong>, executa a coleta periódica e aciona o motor de <strong>Google Gemini (Structured Outputs)</strong>. Conta com um <strong>Agente de Notificação Inteligente</strong> que identifica oportunidades de <strong>Alta Aderência</strong> e dispara alertas instantâneos (Teams/E-mail) com links pré-filtrados para a equipe técnica, além de feedback engine com <strong>Active Learning (Human-in-the-Loop)</strong> para calibração contínua.
                 </p>
                 <ul class="project-highlights">
                   <li class="project-highlight-item">
@@ -694,44 +694,49 @@
                       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
-                    <span>Orquestração de LLMs (Gemini API) com Prompt Engineering estruturado para classificação de
-                      aderência e sumarização executiva</span>
+                    <span><strong>Orquestração de Agente &amp; Automação (n8n + Docker):</strong> Workflows agendados via cron no n8n containerizado para acionar a API FastAPI e processar coletas multi-fonte (FINEP/FAPESP)</span>
                   </li>
                   <li class="project-highlight-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
-                    <span>Feedback Engine Human-in-the-Loop (Active Learning): decisões humanas persistidas em banco e
-                      injetadas como memória contextual de calibragem</span>
+                    <span><strong>Agente Notificador de Alta Aderência:</strong> Workflow que filtra editais de alto match e dispara alertas automáticos (Teams/E-mail) com resumo executivo, prazos e link web pré-filtrado</span>
                   </li>
                   <li class="project-highlight-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
-                    <span>Pipeline de dados em Python + FastAPI com web scraping, integração de APIs e pré-filtragem
-                      para redução de custo e latência de tokens</span>
+                    <span><strong>Orquestração de LLMs (Gemini API):</strong> Prompt Engineering estruturado para extração em JSON de resumos executivos, prazos e scoring de aderência</span>
                   </li>
                   <li class="project-highlight-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
-                    <span>Interface analítica em React 19 e Tailwind CSS para auditoria de inferências da IA, busca em
-                      tempo real e gestão de teses/temas</span>
+                    <span><strong>Feedback Engine Human-in-the-Loop (Active Learning):</strong> Calibrações e justificativas humanas persistidas no PostgreSQL e injetadas como Few-Shot dinâmico</span>
+                  </li>
+                  <li class="project-highlight-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>Dashboard Reativo em React 19:</strong> Interface moderna com Tailwind CSS, busca em tempo real, visualização de dados brutos e CRUD de temas estratégicos</span>
                   </li>
                 </ul>
                 <div class="project-tags">
+                  <span class="project-tag">Docker</span>
+                  <span class="project-tag">n8n</span>
                   <span class="project-tag">Python</span>
                   <span class="project-tag">FastAPI</span>
                   <span class="project-tag">LLMs</span>
                   <span class="project-tag">Google GenAI</span>
                   <span class="project-tag">Gemini API</span>
                   <span class="project-tag">Active Learning</span>
-                  <span class="project-tag">Prompt Engineering</span>
                   <span class="project-tag">React 19</span>
                   <span class="project-tag">PostgreSQL</span>
+                  <span class="project-tag">Web Scraping</span>
                 </div>
                 <div class="project-links">
                   <a href="https://github.com/caioSiqueiraSantos/Buscador-de-Editais" target="_blank"
@@ -979,7 +984,7 @@
                 <line x1="6" y1="6" x2="6.01" y2="6"></line>
                 <line x1="6" y1="18" x2="6.01" y2="18"></line>
               </svg>
-              <span>Pipelines, APIs &amp; MLOps</span>
+              <span>Agentes (n8n), APIs &amp; MLOps</span>
             </button>
           </div>
 
@@ -1006,6 +1011,12 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
+                  <span><strong>Agente Notificador de Alta Aderência (n8n + Docker):</strong> Orquestração autônoma onde o agente avalia o score da IA, filtra oportunidades de alto match e dispara alertas automáticos (Teams/E-mail) com resumo e links diretos pré-filtrados.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                   <span><strong>Pré-Filtragem Inteligente (Token Optimization):</strong> Camada heurística e léxica em
                     Python antes da chamada ao LLM para descartar ruído e reduzir drasticamente o consumo de tokens e a
                     latência da pipeline.</span>
@@ -1027,28 +1038,24 @@
 
             <div class="ai-architecture-box">
               <div class="ai-arch-header">
-                <span>Pipeline de Inferência GenAI</span>
-                <span>Python &bull; FastAPI &bull; Gemini</span>
+                <span>Pipeline GenAI &amp; Automação</span>
+                <span>Python &bull; n8n &bull; Docker &bull; Gemini</span>
               </div>
               <div class="ai-arch-step">
                 <span class="ai-arch-num">01.</span>
-                <span><strong>Ingestão &amp; Scraping:</strong> Coleta automatizada de documentos brutos e APIs públicas
-                  (FINEP / Editais).</span>
+                <span><strong>Agendamento &amp; Ingestão (n8n/Docker):</strong> Disparo de rotina periódica no backend e coleta multi-fonte (FINEP via API e FAPESP via scraping).</span>
               </div>
               <div class="ai-arch-step">
                 <span class="ai-arch-num">02.</span>
-                <span><strong>Filtro Léxico (Gatekeeper):</strong> Higienização de texto e corte de itens fora de escopo
-                  (economia de ~70% de tokens).</span>
+                <span><strong>Filtro Léxico (Gatekeeper):</strong> Higienização de texto e corte de itens fora de escopo (economia de ~70% de tokens de LLM).</span>
               </div>
               <div class="ai-arch-step">
                 <span class="ai-arch-num">03.</span>
-                <span><strong>Context Builder:</strong> Injeção de temas prioritários + histórico de exemplos validados
-                  (Few-Shot).</span>
+                <span><strong>Triagem LLM &amp; HITL:</strong> Inferência estruturada (JSON) via Gemini API, Few-Shot dinâmico e persistência no PostgreSQL.</span>
               </div>
               <div class="ai-arch-step">
                 <span class="ai-arch-num">04.</span>
-                <span><strong>LLM Semantic Triage:</strong> Inferência via Gemini API com validação de schema e
-                  persistência em PostgreSQL.</span>
+                <span><strong>Agente Notificador de Alta Aderência:</strong> Disparo multicanal (Teams/E-mail) para editais prioritários com link direto pré-filtrado.</span>
               </div>
             </div>
           </div>
@@ -1079,6 +1086,12 @@
                   <span><strong>In-Context Active Learning (Few-Shot Dinâmico):</strong> As correções humanas são
                     recuperadas do banco de dados e injetadas no prompt do sistema como contraexemplos e referências de
                     calibração em tempo real.</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span><strong>Notificação Ativa &amp; Resposta Rápida:</strong> Editais com alta aderência identificados pelo agente disparam alertas imediatos (Teams/E-mail) com links pré-filtrados, direcionando o analista diretamente para a interface de auditoria e calibração.</span>
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -1221,6 +1234,12 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
+                  <span><strong>Orquestração de Agentes com n8n &amp; Docker:</strong> Configuração de workflows agendados (Cron), gatilhos por webhook e orquestração em containers Docker para execução periódica de agentes de busca e notificação multicanal (Teams/E-mail).</span>
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
                   <span><strong>Modelagem de Dados &amp; Persistência:</strong> Estruturação de históricos de
                     inferência,
                     feedbacks, logs de auditoria e dados transacionais em <strong>PostgreSQL</strong>, MySQL e
@@ -1230,13 +1249,12 @@
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span><strong>Containerização &amp; CI/CD:</strong> Ambientes reproduzíveis com <strong>Docker
-                      multi-stage</strong>, Docker Compose e automação de deploy via GitHub Actions.</span>
+                  <span><strong>Containerização &amp; CI/CD:</strong> Ambientes reproduzíveis com <strong>Docker Compose</strong>, builds multi-stage e automação de pipelines contínuos via GitHub Actions.</span>
                 </li>
               </ul>
-              <a href="https://github.com/caioSiqueiraSantos" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/caioSiqueiraSantos/Buscador-de-Editais" target="_blank" rel="noopener noreferrer"
                 class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1.1rem;">
-                Ver Repositórios no GitHub &rarr;
+                Ver Arquitetura de Agentes no GitHub &rarr;
               </a>
             </div>
 
@@ -1247,23 +1265,19 @@
               </div>
               <div class="ai-arch-step">
                 <span class="ai-arch-num">API</span>
-                <span><strong>Backend &amp; Orquestração:</strong> Python (FastAPI), C# (.NET 8 Clean Architecture) e
-                  Node.js.</span>
+                <span><strong>Backend &amp; Orquestração:</strong> Python (FastAPI), n8n Workflows, C# (.NET 8 Clean Architecture) e Node.js.</span>
               </div>
               <div class="ai-arch-step">
                 <span class="ai-arch-num">DATA</span>
-                <span><strong>Persistência &amp; Pipelines:</strong> PostgreSQL 16, SQLite, ETL automatizado e validação
-                  de schemas.</span>
+                <span><strong>Persistência &amp; Pipelines:</strong> PostgreSQL 16, SQLite, ETL automatizado e validação de schemas.</span>
               </div>
               <div class="ai-arch-step">
                 <span class="ai-arch-num">OPS</span>
-                <span><strong>Infraestrutura:</strong> Docker Compose, builds multi-stage, GitHub Actions e ambientes
-                  Linux/Azure.</span>
+                <span><strong>Infra &amp; Containers:</strong> Docker Compose, n8n automações, GitHub Actions e preparação para nuvem Azure.</span>
               </div>
               <div class="ai-arch-step">
                 <span class="ai-arch-num">UI</span>
-                <span><strong>Observabilidade &amp; Produto:</strong> Dashboards interativos em React 19, TypeScript e
-                  Tailwind CSS.</span>
+                <span><strong>Observabilidade &amp; Produto:</strong> Dashboards interativos em React 19, TypeScript e Tailwind CSS.</span>
               </div>
             </div>
           </div>

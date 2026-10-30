@@ -7,7 +7,7 @@ Portfólio técnico de **Engenharia de Inteligência Artificial (AI Engineering 
 - **Orquestração de LLMs & Prompt Engineering**: Integração produtiva com Google Gemini API, extração de dados estruturados (JSON Schema), pré-filtragem léxica para otimização de tokens e controle de latência.
 - **Active Learning (Human-in-the-Loop)**: Arquitetura de *Feedback Engine* onde reclassificações e justificativas humanas alimentam a memória contextual do modelo (*Few-Shot Dinâmico*) para calibração contínua em produção.
 - **Sistemas de Recomendação & Teoria dos Grafos**: Implementação de Filtragem Colaborativa em Grafos Bipartidos (Usuário–Item) e Busca em Largura (BFS em profundidade 2) para ranqueamento de catálogo e descoberta por afinidade.
-- **AI Software Engineering**: Backends assíncronos e resilientes em **Python (FastAPI)**, **.NET 8 (C#)** e **Node.js**, persistência em **PostgreSQL**, containerização multi-stage com **Docker** e dashboards analíticos em **React 19 + TypeScript**.
+- **AI Software Engineering & Agentes**: Backends assíncronos e resilientes em **Python (FastAPI)**, orquestração de workflows e agentes automatizados com **n8n**, containerização com **Docker**, persistência em **PostgreSQL**, APIs em **.NET 8 (C#)** e dashboards analíticos em **React 19 + TypeScript**.
 
 ## 🚀 Tecnologias do Portfólio
 
