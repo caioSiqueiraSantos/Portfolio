@@ -1,52 +1,77 @@
 :root {
-  /* Identidade Visual Minimalista & Sofisticada: Preto & Azul */
-  --bg-primary: #090b10;
-  --bg-secondary: #0f131c;
-  --bg-card: #121824;
-  --bg-card-hover: #172032;
+  color-scheme: light;
 
-  --border-color: rgba(255, 255, 255, 0.07);
-  --border-card: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(59, 130, 246, 0.4);
-  --border-focus: #3b82f6;
+  --navy: #0f172a;
+  --institutional-blue: #1e3a5f;
+  --graphite: #475569;
+  --slate: #cbd5e1;
+  --neutral: #f8fafc;
 
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --background: var(--neutral);
+  --surface: #fff;
+  --surface-tint: #eef3f8;
+  --text: var(--navy);
+  --text-secondary: var(--graphite);
+  --border: var(--slate);
+  --border-control: #738397;
+  --accent: var(--institutional-blue);
+  --accent-hover: #284d77;
+  --accent-contrast: var(--neutral);
+  --accent-surface: #e2ebf5;
+  --inverse-background: var(--navy);
+  --focus: #235d94;
+  --success: #185b46;
+  --error: #a12a2a;
+  --shadow: 0 4px 12px rgb(15 23 42 / 7%);
 
-  /* Azul Principal & Acentos */
-  --accent-blue: #3b82f6;
-  --accent-blue-hover: #2563eb;
-  --accent-cyan: #38bdf8;
-  --accent-glow: rgba(59, 130, 246, 0.15);
+  --font-sans: Inter, "Segoe UI", system-ui, sans-serif;
+  --text-small: 0.875rem;
+  --text-label: 0.8125rem;
+  --text-body: 1rem;
+  --text-lead: 1.125rem;
+  --title-section: clamp(1.875rem, 3.7vw, 3.125rem);
+  --title-project: clamp(1.625rem, 2.8vw, 2.375rem);
+  --title-hero: clamp(2.875rem, 6.2vw, 5rem);
+  --leading-body: 1.65;
+  --leading-title: 1.1;
 
-  --success: #10b981;
-  --error: #ef4444;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --section-space: clamp(var(--space-12), 7vw, var(--space-24));
+  --gutter: clamp(var(--space-5), 4vw, var(--space-12));
+  --grid-gap: var(--space-6);
+  --container: 74rem;
+  --header-height: 4.25rem;
+  --radius-control: 0.25rem;
+  --radius-surface: 0.5rem;
+  --transition: 150ms ease;
+}
 
-  /* Tipografia */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-
-  /* Espaçamentos */
-  --space-xs: 0.35rem;
-  --space-sm: 0.6rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2rem;
-  --space-2xl: 3rem;
-  --space-3xl: 4.5rem;
-
-  /* Raios e Bordas */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --radius-full: 9999px;
-
-  /* Sombras */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-blue: 0 0 25px rgba(59, 130, 246, 0.15);
-
-  --transition-fast: 0.18s ease;
-  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #101b2b;
+  --surface: #142033;
+  --surface-tint: #18263a;
+  --text: var(--neutral);
+  --text-secondary: var(--slate);
+  --border: #394b63;
+  --accent: #adc8e7;
+  --accent-hover: #c9dbf1;
+  --accent-contrast: var(--navy);
+  --accent-surface: #263b56;
+  --inverse-background: #0b1320;
+  --focus: #a6d1ff;
+  --success: #8dd8b8;
+  --error: #ffb4b4;
+  --shadow: 0 4px 12px rgb(0 0 0 / 20%);
 }

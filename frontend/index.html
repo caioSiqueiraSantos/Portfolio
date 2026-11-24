@@ -1,1417 +1,449 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Favicon / Ícones para Navegador e Google Search Favicon -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48x48.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192.png">
-  <link rel="apple-touch-icon" sizes="192x192" href="assets/img/icon-192.png">
-  <link rel="manifest" href="/site.webmanifest">
-
-  <!-- SEO Essencial focado em AI Engineer & GenAI -->
-  <title>Caio Siqueira Santos | AI Engineer &amp; Desenvolvedor Full Stack (GenAI &amp; LLMs)</title>
-  <meta name="description"
-    content="Portfólio de Caio Siqueira Santos — AI Engineer &amp; Desenvolvedor Full Stack. Construção e operacionalização de soluções com IA Generativa (LLMs, Gemini API), Active Learning, Sistemas de Recomendação em Grafos, Python, FastAPI, React e Docker.">
-  <meta name="keywords"
-    content="Caio Siqueira Santos, AI Engineer, Engenharia de IA, GenAI, Large Language Models, LLMs, Prompt Engineering, Active Learning, Machine Learning, Sistemas de Recomendação, Python, FastAPI, React, TypeScript, C#, PostgreSQL, Docker">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
+  <script src="js/theme.js"></script>
+  <title>Caio Siqueira Santos | Engenharia de Software &amp; Tecnologia</title>
+  <meta name="description" content="Portfólio profissional de Caio Siqueira Santos, graduando em Ciência da Computação com experiência em engenharia de software, arquitetura de sistemas, automação, inteligência artificial aplicada e inovação tecnológica.">
   <meta name="author" content="Caio Siqueira Santos">
-  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://caio-siqueira-santos.com.br/">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48x48.png">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon" sizes="192x192" href="assets/img/icon-192.png">
+  <link rel="manifest" href="site.webmanifest">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="profile">
-  <meta property="og:title"
-    content="Caio Siqueira Santos | AI Engineer &amp; Engenharia de Software (GenAI &amp; LLMs)">
-  <meta property="og:description"
-    content="Construção e integração de produtos de Inteligência Artificial: pipelines com LLMs, Active Learning (Human-in-the-Loop), motores de recomendação em grafos e arquiteturas escaláveis em Python, FastAPI e React.">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Caio Siqueira Santos | Engenharia de Software &amp; Tecnologia">
+  <meta property="og:description" content="Ciência da Computação e experiência corporativa em engenharia de software, arquitetura de sistemas, automação e inteligência artificial aplicada.">
   <meta property="og:url" content="https://caio-siqueira-santos.com.br/">
-  <meta property="og:site_name" content="Portfólio de Caio Siqueira Santos — AI Engineer">
+  <meta property="og:site_name" content="Caio Siqueira Santos">
   <meta property="og:image" content="https://caio-siqueira-santos.com.br/assets/img/profile.jpg">
+  <meta property="og:image:width" content="400">
+  <meta property="og:image:height" content="400">
+  <meta property="og:image:alt" content="Retrato de Caio Siqueira Santos">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Caio Siqueira Santos | AI Engineer &amp; Desenvolvedor Full Stack">
-  <meta name="twitter:description"
-    content="Engenharia de IA e Software: LLMs em produção, Active Learning, Sistemas de Recomendação em Grafos, Python, FastAPI e React.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Caio Siqueira Santos | Engenharia de Software &amp; Tecnologia">
+  <meta name="twitter:description" content="Ciência da Computação e experiência corporativa em engenharia de software, arquitetura de sistemas, automação e inteligência artificial aplicada.">
   <meta name="twitter:image" content="https://caio-siqueira-santos.com.br/assets/img/profile.jpg">
+  <meta name="twitter:image:alt" content="Retrato de Caio Siqueira Santos">
 
-  <!-- Dados Estruturados Schema.org (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://caio-siqueira-santos.com.br/#person",
-        "name": "Caio Siqueira Santos",
-        "jobTitle": "AI Engineer & Desenvolvedor Full Stack",
-        "description": "Estudante de Ciência da Computação e AI Engineer com experiência prática na construção e operacionalização de produtos de Inteligência Artificial Generativa (LLMs), pipelines de dados e Active Learning (Human-in-the-Loop) em Python/FastAPI, motores de recomendação em grafos e engenharia de software ponta a ponta.",
-        "url": "https://caio-siqueira-santos.com.br/",
-        "image": "https://caio-siqueira-santos.com.br/assets/img/profile.jpg",
-        "email": "caio.siqueira.dev@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "São Paulo",
-          "addressRegion": "SP",
-          "addressCountry": "BR"
-        },
-        "sameAs": [
-          "https://github.com/caioSiqueiraSantos",
-          "https://linkedin.com/in/caio-siqueira-santos",
-          "https://wa.me/5511966935424"
-        ],
-        "knowsAbout": [
-          "Artificial Intelligence Engineering (AI Engineering)",
-          "Large Language Models (LLMs)",
-          "Generative AI (GenAI & Google Gemini API)",
-          "Prompt Engineering & Structured Outputs",
-          "Active Learning & Human-in-the-Loop (HITL)",
-          "Recommender Systems & Graph Theory (BFS, Collaborative Filtering)",
-          "Python",
-          "FastAPI",
-          "React.js & TypeScript",
-          "Node.js",
-          "C# & .NET 8",
-          "PostgreSQL & SQL",
-          "Docker & Containers",
-          "Data Pipelines & Web Scraping"
-        ]
+    "@type": "ProfilePage",
+    "url": "https://caio-siqueira-santos.com.br/",
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://caio-siqueira-santos.com.br/#person",
+      "name": "Caio Siqueira Santos",
+      "jobTitle": "Estagiário de Inovação e Tecnologia",
+      "description": "Graduando em Ciência da Computação com atuação em engenharia de software e inovação tecnológica.",
+      "url": "https://caio-siqueira-santos.com.br/",
+      "image": "https://caio-siqueira-santos.com.br/assets/img/profile.jpg",
+      "email": "caio.siqueira.dev@gmail.com",
+      "worksFor": { "@type": "Organization", "name": "Metrô de São Paulo" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
       },
-      {
-        "@type": "ProfessionalService",
-        "name": "Caio Siqueira Santos — AI Engineering, GenAI & Engenharia de Software",
-        "url": "https://caio-siqueira-santos.com.br/",
-        "image": "https://caio-siqueira-santos.com.br/assets/img/profile.jpg",
-        "description": "Desenvolvimento e operacionalização de soluções de Inteligência Artificial (LLMs, GenAI, Active Learning e Sistemas de Recomendação), pipelines de dados em Python/FastAPI e arquiteturas web escaláveis.",
-        "provider": { "@id": "https://caio-siqueira-santos.com.br/#person" },
-        "email": "caio.siqueira.dev@gmail.com",
-        "areaServed": "BR",
-        "serviceType": [
-          "Engenharia de Inteligência Artificial (AI Engineering)",
-          "Integração e Orquestração de LLMs (GenAI)",
-          "Pipelines de Dados, ETL & Active Learning em Python",
-          "Sistemas de Recomendação e Modelagem em Grafos",
-          "Engenharia de Software Full Stack (FastAPI, React, .NET, Docker)"
-        ]
-      }
-    ]
+      "sameAs": [
+        "https://github.com/caioSiqueiraSantos",
+        "https://linkedin.com/in/caio-siqueira-santos",
+        "https://wa.me/5511966935424"
+      ],
+      "knowsAbout": [
+        "Engenharia de Software", "Arquitetura de Sistemas", "Integração de APIs",
+        "Automação de Processos", "Inteligência Artificial Aplicada", "Sistemas de Recomendação"
+      ]
+    }
   }
   </script>
 
-  <!-- Estilos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Ir para o conteúdo</a>
 
-  <!-- Barra de Navegação -->
   <header class="site-header">
-    <div class="container nav-container">
-      <a href="#" class="brand-logo" aria-label="Página Inicial">
-        <span>caio</span><span class="brand-dot">.ai</span>
+    <div class="container header-inner">
+      <a href="#about" class="brand">
+        <span class="brand-mark" aria-hidden="true">CS<span>.</span></span>
+        <span>Caio Siqueira Santos</span>
       </a>
-      <nav aria-label="Navegação Principal">
-        <ul class="nav-links">
-          <li><a href="#about-me" class="nav-link">Sobre Mim</a></li>
-          <li><a href="#services" class="nav-link">Soluções em IA</a></li>
-          <li><a href="#technologies" class="nav-link">Tecnologias</a></li>
-          <li><a href="#projects" class="nav-link">Projetos</a></li>
-          <li><a href="#ai-engineering" class="nav-link">Engenharia de IA</a></li>
-          <li><a href="#contact" class="nav-link">Contato</a></li>
+      <button class="theme-toggle" type="button" aria-label="Modo escuro" aria-pressed="false" title="Ativar modo escuro" hidden>
+        <svg class="theme-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
+        </svg>
+        <svg class="theme-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.5 14.5A9 9 0 0 1 9.5 3.5a9 9 0 1 0 11 11Z"/>
+        </svg>
+      </button>
+      <button class="menu-toggle" type="button" aria-label="Menu" aria-controls="primary-nav" aria-expanded="false" hidden>
+        <span>Menu</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <path d="M4 8h16M4 16h16"/>
+        </svg>
+      </button>
+      <nav class="site-nav" id="primary-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#about-me">Sobre</a></li>
+          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#technologies">Competências</a></li>
+          <li><a href="#ai-engineering">Engenharia Aplicada</a></li>
+          <li><a href="#contact" class="nav-contact">Contato</a></li>
         </ul>
       </nav>
-      <div class="nav-actions">
-        <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.85rem;">Fale Comigo</a>
-      </div>
     </div>
   </header>
 
-  <main>
-    <!-- Seção Hero / Apresentação com Foco em AI Engineering -->
-    <section class="section hero" id="about">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <!-- Badge de Disponibilidade Ativa -->
-          <div class="hero-status-pill">
-            <span class="status-dot"></span>
-            <span>Foco em AI Engineering, GenAI, LLMs &amp; Engenharia de Software</span>
+  <main id="main-content" tabindex="-1">
+    <section class="hero" id="about" aria-labelledby="hero-title">
+      <div class="container editorial-grid hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow hero-label">Engenharia de Software &amp; Tecnologia</p>
+          <h1 id="hero-title">Caio Siqueira <span>Santos</span></h1>
+          <p class="hero-tagline">Engenharia, tecnologia e inovação aplicada.</p>
+          <p class="hero-description">Graduando em Ciência da Computação, com experiência na concepção e no desenvolvimento de soluções em ambiente corporativo. Minha atuação conecta arquitetura de sistemas, automação e inteligência artificial a necessidades de negócio.</p>
+          <div class="actions hero-actions">
+            <a href="#experience" class="button button-primary">Conheça minha trajetória</a>
+            <a href="#projects" class="button button-secondary">Explorar projetos</a>
           </div>
-
-          <h1 class="hero-name">
-            <span class="first-name">Caio</span> <span class="last-name">Siqueira Santos</span>
-          </h1>
-          <p class="hero-role">AI Engineer &amp; Desenvolvedor Full Stack (GenAI &bull; LLMs &bull; Python)</p>
-
-          <p class="hero-bio">
-            Construo e operacionalizo soluções de software orientadas a produtos de <strong>Inteligência
-              Artificial</strong>.
-            Experiência prática na orquestração de <strong>Large Language Models (LLMs / Google Gemini)</strong>,
-            arquiteturas de <strong>Active Learning (Human-in-the-Loop)</strong>, <strong>Sistemas de Recomendação em
-              Grafos</strong> e pipelines de dados em <strong>Python</strong> e <strong>FastAPI</strong>, integrados a
-            backends escaláveis (<strong>Node.js</strong>, <strong>C#/.NET</strong>, <strong>PostgreSQL</strong>,
-            <strong>Docker</strong>) e interfaces analíticas em <strong>React &amp; TypeScript</strong>.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#ai-engineering" class="btn btn-primary">Ver Engenharia de IA &amp; LLMs</a>
-            <a href="#projects" class="btn btn-secondary">Projetos em Produção</a>
-          </div>
-
-          <!-- Botões de Redes e Contato -->
-          <div class="social-buttons" aria-label="Perfis Profissionais">
-
-            <a href="https://github.com/caioSiqueiraSantos" target="_blank" rel="noopener noreferrer" class="btn-social"
-              id="link-github">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-              </svg>
-              <span>GitHub</span>
-            </a>
-
-            <a href="https://linkedin.com/in/caio-siqueira-santos" target="_blank" rel="noopener noreferrer"
-              class="btn-social" id="link-linkedin">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
-              <span>LinkedIn</span>
-            </a>
-
-            <a href="https://wa.me/5511966935424?text=Ol%C3%A1%2C%20Caio!%20Vi%20seu%20portf%C3%B3lio%20de%20AI%20Engineer%20e%20gostaria%20de%20conversar."
-              target="_blank" rel="noopener noreferrer" class="btn-social btn-whatsapp" id="hero-whatsapp-btn"
-              title="Conversar diretamente pelo WhatsApp (+55 11 96693-5424)">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-              </svg>
-              <span>WhatsApp</span>
-            </a>
-          </div>
-
-          <!-- Métricas de Destaque Técnico -->
-          <div class="hero-stats-bar">
-            <div class="hero-stat-item">
-              <span class="hero-stat-number">GenAI &amp; LLMs</span>
-              <span class="hero-stat-label">Pipelines &bull; Prompt Eng &bull; HITL</span>
-            </div>
-            <div class="hero-stat-divider" aria-hidden="true"></div>
-            <div class="hero-stat-item">
-              <span class="hero-stat-number">Algoritmos</span>
-              <span class="hero-stat-label">Recomendação &bull; Grafos &bull; ETL</span>
-            </div>
-            <div class="hero-stat-divider" aria-hidden="true"></div>
-            <div class="hero-stat-item">
-              <span class="hero-stat-number">AI Software Eng</span>
-              <span class="hero-stat-label">Python &bull; FastAPI &bull; React &bull; Docker</span>
-            </div>
-          </div>
+          <ul class="inline-links hero-links" aria-label="Perfis profissionais">
+            <li><a href="https://linkedin.com/in/caio-siqueira-santos" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/caioSiqueiraSantos" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          </ul>
         </div>
-
-        <!-- Foto de Perfil -->
-        <div class="hero-avatar-wrapper">
-          <div class="avatar-container">
-            <img src="assets/img/profile.jpg" alt="Foto de Caio Siqueira Santos" class="profile-avatar" width="260"
-              height="260" loading="eager">
-          </div>
-        </div>
+        <figure class="hero-profile">
+          <img src="assets/img/profile.jpg" alt="Retrato de Caio Siqueira Santos" width="400" height="400" fetchpriority="high">
+          <figcaption>
+            <span class="eyebrow">Atuação atual</span>
+            <strong>Metrô de São Paulo</strong>
+            <span>Núcleo de Inovação e Tecnologia</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- Seção Sobre Mim Expandida -->
-    <section class="section" id="about-me">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Sobre Mim</h2>
-          <p class="section-subtitle">Engenharia de IA &amp; Software ponta a ponta: modelos generativos em produção,
-            algoritmos de recomendação e arquiteturas escaláveis.</p>
+    <section class="section" id="about-me" aria-labelledby="about-title">
+      <div class="container editorial-grid about-grid">
+        <h2 id="about-title" class="section-title">Sobre</h2>
+        <div class="about-copy prose">
+          <p>Estudo Ciência da Computação no Centro Universitário Braz Cubas e integro o Núcleo de Inovação e Tecnologia do Metrô de São Paulo. No estágio, participo da concepção, da arquitetura e da implementação de soluções corporativas, desde o entendimento dos requisitos até a integração de sistemas e serviços.</p>
+          <p>Aplico fundamentos de computação à organização de dados, à automação de processos e à construção de aplicações. Quero aprofundar meus conhecimentos em arquitetura, infraestrutura, nuvem e segurança para participar da evolução de sistemas ao longo de seu ciclo de vida.</p>
         </div>
-
-        <div class="about-grid">
-          <!-- Coluna 1: Narrativa Profissional Estratégica -->
-          <div class="about-narrative">
-            <p class="about-paragraph">
-              Sou estudante de <strong>Ciência da Computação</strong> com atuação focada em <strong>AI Engineering
-                (Engenharia de Inteligência Artificial)</strong> e <strong>Engenharia de Software Full Stack</strong>.
-              Atuo "dentro da máquina", conectando a inteligência de modelos generativos e algoritmos matemáticos a
-              produtos de software reais, resilientes e escaláveis.
-            </p>
-            <p class="about-paragraph">
-              Na camada de <strong>IA Generativa e Dados</strong>, desenvolvo pipelines completos em
-              <strong>Python</strong> e <strong>FastAPI</strong> que integram <strong>Large Language Models (LLMs /
-                Google Gemini API)</strong> com engenharia de prompt estruturada, pré-filtragem léxica para otimização de
-              tokens e ciclos de <strong>Active Learning (Human-in-the-Loop)</strong> — onde o feedback do usuário
-              alimenta a memória contextual do modelo para aprendizado e calibração contínua.
-            </p>
-            <p class="about-paragraph">
-              Combinando fundamentos sólidos de computação (como <strong>Sistemas de Recomendação</strong> com Filtragem
-              Colaborativa e <strong>Teoria dos Grafos</strong>) à engenharia de software moderna (<strong>React 19,
-                TypeScript, Node.js, C#/.NET 8, PostgreSQL e Docker</strong>), entrego soluções completas que
-              transformam
-              dados complexos e inferências de IA em valor direto para o negócio.
-            </p>
-
-            <div class="hero-actions" style="margin-top: 0.5rem; margin-bottom: 0;">
-              <a href="#ai-engineering" class="btn btn-primary">Explorar Aba de IA</a>
-              <a href="#projects" class="btn btn-secondary">Ver Implementações</a>
-            </div>
-          </div>
-
-          <!-- Coluna 2: Pilares e Diferenciais em IA -->
-          <div class="about-highlights-grid">
-            <div class="highlight-card">
-              <div class="highlight-badge">GenAI &amp; Large Language Models</div>
-              <h3 class="highlight-card-title">Orquestração de LLMs &amp; Active Learning</h3>
-              <p class="highlight-card-desc">
-                Integração produtiva de LLMs (Gemini API), extração de JSON estruturado, Prompt Engineering (Few-Shot
-                dinâmico) e Feedback Engines com Human-in-the-Loop para refinamento contínuo de aderência.
-              </p>
-            </div>
-
-            <div class="highlight-card">
-              <div class="highlight-badge">Algoritmos &amp; Recomendação</div>
-              <h3 class="highlight-card-title">Grafos, Heurísticas &amp; Pipelines</h3>
-              <p class="highlight-card-desc">
-                Modelagem de sistemas de recomendação com Grafos Bipartidos, Filtragem Colaborativa e Busca em Largura
-                (BFS), além de ingestão automatizada, web scraping e pré-processamento em Python.
-              </p>
-            </div>
-
-            <div class="highlight-card">
-              <div class="highlight-badge">AI Software Engineering</div>
-              <h3 class="highlight-card-title">Arquitetura Resiliente &amp; Full Stack</h3>
-              <p class="highlight-card-desc">
-                Operacionalização de produtos de IA com APIs assíncronas em FastAPI, Node.js e .NET 8, persistência em
-                PostgreSQL, containerização com Docker e dashboards analíticos em React e TypeScript.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção de Soluções & Competências em IA -->
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Soluções &amp; Competências em Engenharia de IA</h2>
-          <p class="section-subtitle">Da experimentação e ajuste de prompts/modelos à engenharia de software ponta a
-            ponta para produtos inteligentes em produção.</p>
-        </div>
-
-        <div class="services-grid">
-          <!-- Solução 1: Engenharia de IA & Integração de LLMs -->
-          <article class="service-card" itemscope itemtype="https://schema.org/Service">
-            <div>
-              <div class="service-icon-wrapper" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                  <polyline points="2 17 12 22 22 17"></polyline>
-                  <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>
-              </div>
-              <h3 class="service-title" itemprop="name">Engenharia de IA &amp; LLMs (GenAI)</h3>
-              <p class="service-desc" itemprop="description">
-                Construção e integração de funcionalidades baseadas em Large Language Models (Google Gemini / OpenAI) em
-                produtos digitais, com foco em extração estruturada, baixa latência e alta precisão semântica.
-              </p>
-              <ul class="service-deliverables">
-                <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  Prompt Engineering &amp; Few-Shot Dinâmico
-                </li>
-                <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  Classificação, triagem e sumarização com LLMs
-                </li>
-                <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  Otimização de contexto e redução de tokens
-                </li>
-              </ul>
-            </div>
-            <a href="#contact" class="btn btn-secondary service-cta-btn"
-              onclick="document.getElementById('message').value = 'Olá Caio, vimos seu portfólio de AI Engineer (LLMs & GenAI) e gostaríamos de conversar: '; document.getElementById('message').focus();">
-              Conversar sobre GenAI &rarr;
-            </a>
-          </article>
-
-          <!-- Solução 2: Pipelines de IA & Active Learning -->
-          <article class="service-card" itemscope itemtype="https://schema.org/Service">
-            <div>
-              <div class="service-icon-wrapper" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="3"></circle>
-                  <path
-                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
-                  </path>
-                </svg>
-              </div>
-              <h3 class="service-title" itemprop="name">Pipelines de Dados &amp; Active Learning</h3>
-              <p class="service-desc" itemprop="description">
-                Desenvolvimento de pipelines automatizados em Python para coleta, higienização e enriquecimento de dados
-                com IA, incluindo fluxos Human-in-the-Loop para evolução contínua do modelo.
-              </p>
-              <ul class="service-deliverables">
-                <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  Feedback Engines com memória de aprendizado
-                </li>
-                <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  ETL, Web Scraping e ingestão de APIs em Python
-                </li>
-                <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  Auditoria e rastreabilidade de inferências
-                </li>
-              </ul>
-            </div>
-            <a href="#contact" class="btn btn-secondary service-cta-btn"
-              onclick="document.getElementById('message').value = 'Olá Caio, gostaria de conversar sobre pipelines de IA e Python: '; document.getElementById('message').focus();">
-              Conversar sobre Pipelines &rarr;
-            </a>
-          </article>
-
-          <!-- Solução 3: Sistemas de Recomendação & Algoritmos -->
-          <article class="service-card" itemscope itemtype="https://schema.org/Service">
-            <div>
-              <div class="service-icon-wrapper" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="18" cy="5" r="3"></circle>
-                  <circle cx="6" cy="12" r="3"></circle>
-                  <circle cx="18" cy="19" r="3"></circle>
-                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-                </svg>
-              </div>
-              <h3 class="service-title" itemprop="name">Recomendação &amp; Algoritmos em Grafos</h3>
-              <p class="service-desc" itemprop="description">
-                Implementação de algoritmos de descoberta, ranqueamento e recomendação personalizada baseados em Teoria
-                dos Grafos e Filtragem Colaborativa para aumentar engajamento e conversão.
-              </p>
-              <ul class="service-deliverables">
-                <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  Grafos Bipartidos e Filtragem Colaborativa
-                </li>
-                <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  Travessia em grafos (BFS) e scoring de afinidade
-                </li>
-                <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  Recomendação explicável integrada ao produto
-                </li>
-              </ul>
-            </div>
-            <a href="#contact" class="btn btn-secondary service-cta-btn"
-              onclick="document.getElementById('message').value = 'Olá Caio, gostaria de conversar sobre algoritmos e sistemas de recomendação: '; document.getElementById('message').focus();">
-              Conversar sobre Algoritmos &rarr;
-            </a>
-          </article>
-
-          <!-- Solução 4: Engenharia Backend, APIs & Interfaces para IA -->
-          <article class="service-card" itemscope itemtype="https://schema.org/Service">
-            <div>
-              <div class="service-icon-wrapper" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
-                </svg>
-              </div>
-              <h3 class="service-title" itemprop="name">Engenharia Full Stack para Produtos de IA</h3>
-              <p class="service-desc" itemprop="description">
-                Arquitetura de APIs RESTful resilientes (FastAPI, Node.js, .NET 8), bancos relacionais (PostgreSQL) e
-                interfaces reativas em React e TypeScript para servir soluções inteligentes em produção.
-              </p>
-              <ul class="service-deliverables">
-                <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  Backends em FastAPI (Python), .NET 8 e Node.js
-                </li>
-                <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  Dashboards analíticos em React 19 &amp; TypeScript
-                </li>
-                <li class="service-deliverable-item">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  Containerização com Docker &amp; PostgreSQL
-                </li>
-              </ul>
-            </div>
-            <a href="#contact" class="btn btn-secondary service-cta-btn"
-              onclick="document.getElementById('message').value = 'Olá Caio, gostaria de conversar sobre engenharia de software e IA: '; document.getElementById('message').focus();">
-              Conversar sobre Engenharia &rarr;
-            </a>
-          </article>
-        </div>
-
-        <!-- CTA Banner focado em Equipes de IA e Tecnologia -->
-        <div class="services-cta-banner">
+        <dl class="about-facts">
           <div>
-            <h3 class="services-cta-title">Buscando um AI Engineer com base sólida em Engenharia de Software?</h3>
-            <p class="services-cta-sub">
-              Pronto para atuar na construção e operacionalização de soluções com GenAI, LLMs, pipelines de dados e
-              algoritmos em equipes de alta performance.
-            </p>
+            <dt>Formação</dt>
+            <dd><strong>Ciência da Computação</strong><br>Centro Universitário Braz Cubas</dd>
           </div>
-          <a href="#contact" class="btn btn-primary" style="white-space: nowrap;">
-            Iniciar Conversa &rarr;
-          </a>
-        </div>
+          <div>
+            <dt>Conclusão prevista</dt>
+            <dd><time datetime="2027-12">Dezembro de 2027</time></dd>
+          </div>
+        </dl>
       </div>
     </section>
 
-    <!-- Seção de Tecnologias & Ferramentas com Destaque em IA -->
-    <section class="section" id="technologies">
+    <section class="section section-inverse" id="experience" aria-labelledby="experience-title">
+      <div class="container editorial-grid experience-grid">
+        <div class="experience-intro">
+          <h2 id="experience-title" class="eyebrow">Experiência profissional</h2>
+          <h3 class="section-title">Metrô de São Paulo</h3>
+          <p class="experience-role">Estagiário de Inovação e Tecnologia</p>
+          <p>Núcleo de Inovação e Tecnologia (NIT) · Tecnologia da Informação</p>
+          <p class="experience-period"><time datetime="2025-04">Abril de 2025</time> — presente</p>
+        </div>
+        <ul class="experience-list" role="list">
+          <li><strong>Concepção e arquitetura</strong> Levantamento de necessidades, avaliação de alternativas técnicas, participação nas decisões de arquitetura e implementação de aplicações e integrações.</li>
+          <li><strong>Monitoramento de oportunidades</strong> Desenvolvimento de um sistema para coletar e triar editais de inovação com APIs, inteligência artificial e fluxos automatizados.</li>
+          <li><strong>Automação e capacitação</strong> Automação da geração de contratos e documentos corporativos e desenvolvimento de soluções interativas para capacitação de colaboradores.</li>
+          <li><strong>Dados e Business Intelligence</strong> Modelagem e organização de informações, trabalho com bancos de dados e apoio à análise com ferramentas de BI.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Tecnologias, IA &amp; Ferramentas</h2>
-          <p class="section-subtitle">Ecossistema técnico utilizado para desenvolver, integrar e colocar em produção
-            soluções de Inteligência Artificial e Engenharia de Software.</p>
+        <div class="section-heading">
+          <h2 id="projects-title" class="section-title">Projetos em destaque</h2>
+          <p>Estudos de caso em integração de sistemas, modelagem de domínio e algoritmos.</p>
         </div>
-
-        <div class="tech-groups-grid">
-          <!-- IA, GenAI & Algoritmos (Destaque Principal) -->
-          <div class="tech-group-card" style="border-color: rgba(56, 189, 248, 0.35);">
-            <h3 class="tech-group-title">IA, GenAI &amp; Algoritmos</h3>
-            <div class="tech-items-list">
-              <div class="tech-pill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg"
-                  alt="Google Gemini & GenAI" class="tech-logo" loading="lazy">
-                <span class="tech-name">LLMs &amp; Gemini API</span>
-              </div>
-              <div class="tech-pill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                  alt="Prompt Engineering & Active Learning" class="tech-logo" loading="lazy">
-                <span class="tech-name">Prompt Eng &amp; HITL</span>
-              </div>
-              <div class="tech-pill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/networkx/networkx-original.svg"
-                  alt="Sistemas de Recomendação & Grafos" class="tech-logo" loading="lazy"
-                  onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'">
-                <span class="tech-name">Recomendação &amp; Grafos</span>
-              </div>
-              <div class="tech-pill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
-                  alt="Pipelines de Dados & ETL" class="tech-logo" loading="lazy">
-                <span class="tech-name">Pipelines &amp; Scraping</span>
-              </div>
+        <div class="filter-bar" role="group" aria-label="Filtrar projetos" hidden>
+          <button type="button" data-filter="all" aria-pressed="true" aria-controls="projects-container">Todos</button>
+          <button type="button" data-filter="automation" aria-pressed="false" aria-controls="projects-container">Automação e IA</button>
+          <button type="button" data-filter="architecture" aria-pressed="false" aria-controls="projects-container">Arquitetura</button>
+          <button type="button" data-filter="algorithms" aria-pressed="false" aria-controls="projects-container">Algoritmos</button>
+        </div>
+        <p class="visually-hidden" id="project-results" role="status"></p>
+        <div class="project-list" id="projects-container">
+          <article class="project project-featured editorial-grid" id="buscador-de-editais" data-group="automation" aria-labelledby="buscador-title" itemscope itemtype="https://schema.org/SoftwareSourceCode">
+            <div class="project-copy">
+              <p class="project-stage">MVP corporativo — Em homologação</p>
+              <h3 id="buscador-title" itemprop="name">Buscador de Editais com IA</h3>
+              <p itemprop="description">MVP do Metrô de São Paulo para monitorar oportunidades de inovação. O sistema reúne fontes públicas, estrutura editais e automatiza a busca e a triagem, deixando as oportunidades prioritárias prontas para revisão da equipe.</p>
+              <p>Participei da concepção, do planejamento, da arquitetura e da implementação, da coleta periódica à interface de análise e às notificações.</p>
+              <p class="project-stack"><strong>Tecnologias</strong> Python, FastAPI, React, PostgreSQL (Neon), Gemini API, n8n e Docker.</p>
+              <ul class="inline-links">
+                <li><a href="https://github.com/caioSiqueiraSantos/Buscador-de-Editais" target="_blank" rel="noopener noreferrer" itemprop="codeRepository">Repositório do protótipo</a></li>
+              </ul>
             </div>
-          </div>
+            <figure class="project-media">
+              <picture>
+                <source srcset="assets/img/project-buscador-editais.webp" type="image/webp">
+                <img src="assets/img/project-buscador-editais.png" alt="Interface do Buscador de Editais com filtros e chamadas de fomento classificadas por aderência" width="1024" height="429" loading="lazy" decoding="async">
+              </picture>
+              <figcaption>Painel de busca e triagem do protótipo</figcaption>
+            </figure>
+            <details class="project-details">
+              <summary>Decisões de engenharia</summary>
+              <ul>
+                <li><strong>Coleta e pré-filtragem.</strong> O n8n agenda a execução do backend, que integra a API pública da FINEP e coleta dados do site da FAPESP. Regras temáticas e filtros léxicos eliminam itens fora de escopo antes da inferência.</li>
+                <li><strong>Análise e persistência.</strong> A Gemini API retorna JSON estruturado com resumo, prazo, aderência e justificativa. O PostgreSQL preserva editais, classificações e revisões. O painel em React permite pesquisar, filtrar, consultar o texto original e manter temas de interesse.</li>
+                <li><strong>Revisão e notificação.</strong> Reclassificações acompanhadas de justificativa servem de exemplos de contexto em análises seguintes. Workflows enviam alertas por Teams e e-mail para oportunidades de alta aderência.</li>
+              </ul>
+            </details>
+          </article>
 
-          <!-- Linguagens -->
-          <div class="tech-group-card">
-            <h3 class="tech-group-title">Linguagens</h3>
-            <div class="tech-items-list">
-              <div class="tech-pill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
-                  class="tech-logo" loading="lazy">
-                <span class="tech-name">Python</span>
-              </div>
-              <div class="tech-pill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                  alt="TypeScript" class="tech-logo" loading="lazy">
-                <span class="tech-name">TypeScript / JS</span>
-              </div>
-              <div class="tech-pill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#"
-                  class="tech-logo" loading="lazy">
-                <span class="tech-name">C# (.NET 8)</span>
-              </div>
-              <div class="tech-pill">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
-                  alt="SQL" class="tech-logo" loading="lazy">
-                <span class="tech-name">SQL</span>
-              </div>
+          <article class="project editorial-grid" id="servicore" data-group="architecture" aria-labelledby="servicore-title" itemscope itemtype="https://schema.org/SoftwareSourceCode">
+            <div class="project-copy">
+              <p class="project-stage">Projeto pessoal — MVP</p>
+              <h3 id="servicore-title" itemprop="name">ServiCore</h3>
+              <p itemprop="description">Projeto individual de gestão de serviços, concebido para uso em futuras atividades autônomas. O domínio é organizado em um monólito modular com Clean Architecture e Domain-Driven Design.</p>
+              <p class="project-stack"><strong>Tecnologias</strong> C#, .NET 8, EF Core, SQLite, React e TypeScript.</p>
+              <ul class="inline-links">
+                <li><a href="https://github.com/caioSiqueiraSantos/ServiCore" target="_blank" rel="noopener noreferrer" itemprop="codeRepository">Repositório do ServiCore</a></li>
+              </ul>
             </div>
-          </div>
+            <figure class="project-media">
+              <picture>
+                <source srcset="assets/img/project-servicore.webp" type="image/webp">
+                <img src="assets/img/project-servicore.png" alt="Painel do ServiCore com indicadores de gestão de serviços" width="1024" height="428" loading="lazy" decoding="async">
+              </picture>
+              <figcaption>Painel de gestão do MVP</figcaption>
+            </figure>
+            <details class="project-details">
+              <summary>Decisões de engenharia</summary>
+              <ul>
+                <li><strong>Domínio.</strong> Value objects representam conceitos do negócio e ajudam a preservar a precisão dos valores financeiros. Testes automatizados exercitam regras de domínio.</li>
+                <li><strong>Implementação.</strong> EF Core gerencia a persistência no SQLite. A camada de infraestrutura foi preparada para uma migração ao PostgreSQL. A interface usa React, TypeScript e TanStack Query.</li>
+              </ul>
+            </details>
+          </article>
 
-          <!-- Frameworks & Runtimes -->
-          <div class="tech-group-card">
-            <h3 class="tech-group-title">Frameworks &amp; APIs</h3>
-            <div class="tech-items-list">
-              <div class="tech-pill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI"
-                  class="tech-logo" loading="lazy">
-                <span class="tech-name">FastAPI</span>
-              </div>
-              <div class="tech-pill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js"
-                  class="tech-logo" loading="lazy">
-                <span class="tech-name">React 19</span>
-              </div>
-              <div class="tech-pill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
-                  class="tech-logo" loading="lazy">
-                <span class="tech-name">Node.js</span>
-              </div>
-              <div class="tech-pill">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-                  alt="Tailwind CSS" class="tech-logo" loading="lazy">
-                <span class="tech-name">Tailwind CSS</span>
-              </div>
+          <article class="project editorial-grid" id="gameshop" data-group="algorithms" aria-labelledby="gameshop-title" itemscope itemtype="https://schema.org/SoftwareSourceCode">
+            <div class="project-copy">
+              <p class="project-stage">Demonstração funcional online</p>
+              <h3 id="gameshop-title" itemprop="name">GameShop</h3>
+              <p itemprop="description">Projeto acadêmico em grupo que demonstra um comércio eletrônico com catálogo, biblioteca digital e checkout simulado. O motor de recomendação modela relações entre usuários e itens em grafos para sugerir jogos e conexões.</p>
+              <p class="project-stack"><strong>Ferramentas e métodos</strong> React, TypeScript, similaridade de Jaccard e busca em largura (BFS).</p>
+              <ul class="inline-links">
+                <li><a href="https://game-shop-rho-beryl.vercel.app/" target="_blank" rel="noopener noreferrer" itemprop="url">Demonstração do GameShop</a></li>
+                <li><a href="https://github.com/caioSiqueiraSantos/GameShop" target="_blank" rel="noopener noreferrer" itemprop="codeRepository">Repositório do GameShop</a></li>
+              </ul>
             </div>
-          </div>
-
-          <!-- Dados, Containers & Cloud -->
-          <div class="tech-group-card">
-            <h3 class="tech-group-title">Dados, Docker &amp; Cloud</h3>
-            <div class="tech-items-list">
-              <div class="tech-pill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                  alt="PostgreSQL" class="tech-logo" loading="lazy">
-                <span class="tech-name">PostgreSQL</span>
-              </div>
-              <div class="tech-pill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"
-                  class="tech-logo" loading="lazy">
-                <span class="tech-name">Docker &amp; Compose</span>
-              </div>
-              <div class="tech-pill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/n8n/n8n-original.svg" alt="n8n"
-                  class="tech-logo" loading="lazy">
-                <span class="tech-name">n8n (Agentes &amp; Workflows)</span>
-              </div>
-              <div class="tech-pill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git & GitHub"
-                  class="tech-logo" loading="lazy">
-                <span class="tech-name">Git &amp; GitHub Actions</span>
-              </div>
-              <div class="tech-pill">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure"
-                  class="tech-logo" loading="lazy">
-                <span class="tech-name">Azure &amp; Cloud</span>
-              </div>
-            </div>
-          </div>
+            <figure class="project-media">
+              <picture>
+                <source srcset="assets/img/project-gameshop.webp" type="image/webp">
+                <img src="assets/img/project-gameshop.png" alt="GameShop com jogo em destaque e uma seção de recomendações do catálogo" width="1258" height="722" loading="lazy" decoding="async">
+              </picture>
+              <figcaption>Catálogo e recomendações na demonstração</figcaption>
+            </figure>
+            <details class="project-details">
+              <summary>Decisões de engenharia</summary>
+              <ul>
+                <li><strong>Recomendações.</strong> Um grafo bipartido modela as bibliotecas dos usuários e as relações com os itens. A filtragem colaborativa usa a afinidade entre perfis para ranquear jogos que ainda não estão na biblioteca do usuário.</li>
+                <li><strong>Conexões sociais.</strong> A busca em largura explora o grafo social até profundidade dois para sugerir conexões indiretas com base em amizades em comum. A interface apresenta o motivo das sugestões.</li>
+              </ul>
+            </details>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Seção de Projetos em Destaque com Abas de Filtro por IA -->
-    <section class="section" id="projects">
-      <div class="container projects-carousel-container">
-        <div class="projects-section-header">
-          <div class="projects-header-left">
-            <div class="projects-explore-pill">
-              <span class="explore-pulse-icon">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </span>
-              <span>Portfólio Técnico &bull; GenAI, Recomendação &amp; Engenharia</span>
+    <section class="section section-tint" id="technologies" aria-labelledby="skills-title">
+      <div class="container editorial-grid skills-grid">
+        <div class="section-heading skills-heading">
+          <h2 id="skills-title" class="section-title">Competências</h2>
+          <p>Disciplinas que orientam meu trabalho e áreas que estou aprofundando.</p>
+        </div>
+        <div class="skills-content">
+          <dl class="skills-matrix">
+            <div>
+              <dt>Competência central</dt>
+              <dd><strong>Engenharia de Software</strong><br>Desenvolvimento de sistemas e fundamentos de Ciência da Computação.</dd>
             </div>
-            <h2 class="section-title">Projetos em Destaque</h2>
-            <p class="section-subtitle">Implementações práticas de Inteligência Artificial Generativa (LLMs), Active
-              Learning, Sistemas de Recomendação em Grafos e Arquitetura de Software.</p>
-          </div>
-
-          <!-- Total de Projetos no Portfólio -->
-          <div class="projects-total-badge">
-            <span class="projects-count-number">03</span>
-            <span class="projects-count-label">Projetos com Código Aberto no GitHub</span>
-          </div>
-        </div>
-
-        <!-- Abas de Filtro Rápido de Projetos -->
-        <div class="projects-filter-tabs" role="tablist" aria-label="Filtrar projetos por especialidade">
-          <button type="button" class="project-filter-btn active" data-filter="all" onclick="filterProjects('all')">
-            Todos os Projetos (03)
-          </button>
-          <button type="button" class="project-filter-btn" data-filter="ai" onclick="filterProjects('ai')">
-            IA, GenAI &amp; Recomendação (02)
-          </button>
-          <button type="button" class="project-filter-btn" data-filter="software" onclick="filterProjects('software')">
-            Engenharia SaaS &amp; Cloud (01)
-          </button>
-        </div>
-
-        <div class="projects-carousel-wrapper">
-          <!-- Gradiente sutil indicador de mais conteúdo -->
-          <div class="carousel-edge-fade carousel-fade-right" id="carousel-edge-fade">
-            <span class="peek-hint-badge">
-              <span>Mais</span>
-              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </span>
-          </div>
-
-          <div class="projects-carousel-track" id="projects-container">
-            <!-- Projeto 1: Buscador de Editais & Triagem Semântica com IA (Google Gemini) -->
-            <article class="card project-card" data-group="ai" itemscope
-              itemtype="https://schema.org/SoftwareSourceCode">
-              <div class="project-media">
-                <img src="assets/img/project-buscador-editais.png" alt="Preview do projeto Buscador de Editais com IA"
-                  class="project-img" loading="lazy">
-                <div class="project-overlay"></div>
-                <div class="project-badges">
-                  <span class="project-badge badge-default">Agentes &bull; n8n &bull; Docker &bull; Active Learning</span>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-meta-header">
-                  <span class="project-category">AI Engineering &bull; Agentes &amp; Automação (n8n) &bull; LLMs &amp; Docker</span>
-                </div>
-                <h3 class="project-title" itemprop="name">Buscador de Editais &amp; Agente de Triagem com IA (Gemini, n8n &amp; Docker)</h3>
-                <p class="project-desc" itemprop="description">
-                  Sistema inteligente de ponta a ponta para ingestão multi-fonte (APIs públicas da FINEP e web scraping automatizado da FAPESP), pré-filtragem e triagem semântica de editais de fomento à inovação. Containerizado com <strong>Docker</strong> e orquestrado via workflows agendados no <strong>n8n</strong>, executa a coleta periódica e aciona o motor de <strong>Google Gemini (Structured Outputs)</strong>. Conta com um <strong>Agente de Notificação Inteligente</strong> que identifica oportunidades de <strong>Alta Aderência</strong> e dispara alertas instantâneos (Teams/E-mail) com links pré-filtrados para a equipe técnica, além de feedback engine com <strong>Active Learning (Human-in-the-Loop)</strong> para calibração contínua.
-                </p>
-                <ul class="project-highlights">
-                  <li class="project-highlight-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span><strong>Orquestração de Agente &amp; Automação (n8n + Docker):</strong> Workflows agendados via cron no n8n containerizado para acionar a API FastAPI e processar coletas multi-fonte (FINEP/FAPESP)</span>
-                  </li>
-                  <li class="project-highlight-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span><strong>Agente Notificador de Alta Aderência:</strong> Workflow que filtra editais de alto match e dispara alertas automáticos (Teams/E-mail) com resumo executivo, prazos e link web pré-filtrado</span>
-                  </li>
-                  <li class="project-highlight-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span><strong>Orquestração de LLMs (Gemini API):</strong> Prompt Engineering estruturado para extração em JSON de resumos executivos, prazos e scoring de aderência</span>
-                  </li>
-                  <li class="project-highlight-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span><strong>Feedback Engine Human-in-the-Loop (Active Learning):</strong> Calibrações e justificativas humanas persistidas no PostgreSQL e injetadas como Few-Shot dinâmico</span>
-                  </li>
-                  <li class="project-highlight-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span><strong>Dashboard Reativo em React 19:</strong> Interface moderna com Tailwind CSS, busca em tempo real, visualização de dados brutos e CRUD de temas estratégicos</span>
-                  </li>
-                </ul>
-                <div class="project-tags">
-                  <span class="project-tag">Docker</span>
-                  <span class="project-tag">n8n</span>
-                  <span class="project-tag">Python</span>
-                  <span class="project-tag">FastAPI</span>
-                  <span class="project-tag">LLMs</span>
-                  <span class="project-tag">Google GenAI</span>
-                  <span class="project-tag">Gemini API</span>
-                  <span class="project-tag">Active Learning</span>
-                  <span class="project-tag">React 19</span>
-                  <span class="project-tag">PostgreSQL</span>
-                  <span class="project-tag">Web Scraping</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://github.com/caioSiqueiraSantos/Buscador-de-Editais" target="_blank"
-                    rel="noopener noreferrer" class="project-link project-link-secondary" itemprop="codeRepository"
-                    title="Ver código-fonte no repositório GitHub">
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
-                      <path
-                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                    </svg>
-                    <span>Repositório</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Projeto 2: GameShop — Motor de Recomendação em Grafos & E-Commerce -->
-            <article class="card project-card" data-group="ai" itemscope
-              itemtype="https://schema.org/SoftwareSourceCode">
-              <div class="project-media">
-                <img src="assets/img/project-gameshop.png" alt="Preview do projeto GameShop" class="project-img"
-                  loading="lazy">
-                <div class="project-overlay"></div>
-                <div class="project-badges">
-                  <span class="project-badge badge-live">
-                    <span class="status-dot"></span>
-                    Produção Online
-                  </span>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-meta-header">
-                  <span class="project-category">Sistemas de Recomendação &bull; Grafos &amp; Algoritmos</span>
-                </div>
-                <h3 class="project-title" itemprop="name">GameShop — Motor de Recomendação em Grafos &amp; E-Commerce
-                </h3>
-                <p class="project-desc" itemprop="description">
-                  Plataforma digital com motor próprio de recomendação e descoberta baseado em Teoria dos Grafos e
-                  heurísticas de similaridade. Implementa um Grafo Bipartido (Usuário–Item) com Filtragem Colaborativa
-                  para ranquear e recomendar produtos por afinidade de perfil, além de Busca em Largura (BFS em
-                  profundidade 2) no grafo social para inferência de conexões indiretas (amigos de amigos), integrado a
-                  uma experiência completa de checkout e catálogo reativo.
-                </p>
-                <ul class="project-highlights">
-                  <li class="project-highlight-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Motor de recomendação com Grafo Bipartido e Filtragem Colaborativa para personalização de
-                      catálogo por afinidade</span>
-                  </li>
-                  <li class="project-highlight-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Algoritmo de Busca em Largura (BFS profundidade 2) para descoberta de conexões relevantes em
-                      grafos sociais</span>
-                  </li>
-                  <li class="project-highlight-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Arquitetura reativa em React e TypeScript com avaliação comunitária, biblioteca digital e
-                      checkout interativo (PIX/Cartão)</span>
-                  </li>
-                </ul>
-                <div class="project-tags">
-                  <span class="project-tag">Sistemas de Recomendação</span>
-                  <span class="project-tag">Teoria dos Grafos</span>
-                  <span class="project-tag">Filtragem Colaborativa</span>
-                  <span class="project-tag">BFS</span>
-                  <span class="project-tag">TypeScript</span>
-                  <span class="project-tag">React</span>
-                  <span class="project-tag">Algoritmos</span>
-                </div>
-                <div class="project-links">
-                  <a href="https://game-shop-rho-beryl.vercel.app/" target="_blank" rel="noopener noreferrer"
-                    class="project-link project-link-primary" itemprop="url"
-                    title="Acessar aplicação online em produção">
-                    <span>Acessar Projeto</span>
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
-                      stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                  <a href="https://github.com/caioSiqueiraSantos/GameShop" target="_blank" rel="noopener noreferrer"
-                    class="project-link project-link-secondary" itemprop="codeRepository"
-                    title="Ver código-fonte no repositório GitHub">
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
-                      <path
-                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                    </svg>
-                    <span>Repositório</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Projeto 3: ServiCore — Plataforma SaaS & Engenharia de Dados Corporativos -->
-            <article class="card project-card" data-group="software" itemscope
-              itemtype="https://schema.org/SoftwareSourceCode">
-              <div class="project-media">
-                <img src="assets/img/project-servicore.png"
-                  alt="Preview do projeto ServiCore — Gestão para Prestadores de Serviços" class="project-img"
-                  loading="lazy">
-                <div class="project-overlay"></div>
-                <div class="project-badges">
-                  <span class="project-badge badge-fullstack">
-                    <span class="status-dot"></span>
-                    Docker &amp; Cloud Ready
-                  </span>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-meta-header">
-                  <span class="project-category">Engenharia de Software &bull; Arquitetura Modular &amp; Docker</span>
-                </div>
-                <h3 class="project-title" itemprop="name">ServiCore — Plataforma SaaS &amp; Engenharia de Dados
-                  Corporativos
-                </h3>
-                <p class="project-desc" itemprop="description">
-                  Plataforma corporativa concebida com rigor de Engenharia de Software para alta confiabilidade de dados
-                  operacionais e financeiros. Arquitetura em monólito modular com .NET 8 (Clean Architecture,
-                  Domain-Driven Design, Value Objects para exatidão numérica e testes automatizados), banco relacional
-                  PostgreSQL 16, containerização multi-stage com Docker Compose e frontend analítico em React 19 +
-                  TypeScript.
-                </p>
-                <ul class="project-highlights">
-                  <li class="project-highlight-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Engenharia de software sólida com Clean Architecture, DDD, EF Core e consistência transacional
-                      em PostgreSQL</span>
-                  </li>
-                  <li class="project-highlight-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Infraestrutura reproduzível com Docker multi-stage e Docker Compose pronta para deploy de
-                      microsserviços e APIs</span>
-                  </li>
-                  <li class="project-highlight-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <span>Dashboard reativo em React 19, TypeScript e TanStack Query com trilha completa de auditoria e
-                      observabilidade de dados</span>
-                  </li>
-                </ul>
-                <div class="project-tags">
-                  <span class="project-tag">.NET 8</span>
-                  <span class="project-tag">C#</span>
-                  <span class="project-tag">Clean Architecture</span>
-                  <span class="project-tag">Docker</span>
-                  <span class="project-tag">PostgreSQL</span>
-                  <span class="project-tag">React 19</span>
-                  <span class="project-tag">TypeScript</span>
-                  <span class="project-tag">EF Core</span>
-                </div>
-                <div class="project-links">
-                  <button type="button" class="project-link project-link-disabled"
-                    title="Deploy em andamento — URL disponível em breve">
-                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <polyline points="12 6 12 12 16 14"></polyline>
-                    </svg>
-                    <span>Deploy em Breve</span>
-                  </button>
-                  <a href="https://github.com/caioSiqueiraSantos/ServiCore" target="_blank" rel="noopener noreferrer"
-                    class="project-link project-link-secondary" itemprop="codeRepository"
-                    title="Ver código-fonte no repositório GitHub">
-                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
-                      <path
-                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                    </svg>
-                    <span>Repositório</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
+            <div>
+              <dt>Competências aplicadas</dt>
+              <dd>Arquitetura de software, integração de sistemas e APIs, inteligência artificial aplicada, automação de processos, modelagem e persistência de dados, algoritmos e estruturas de dados.</dd>
+            </div>
+            <div>
+              <dt>Áreas de aprofundamento</dt>
+              <dd>Computação em nuvem (incluindo Azure), infraestrutura e sistemas distribuídos, segurança da informação e cibersegurança, confiabilidade e qualidade de software.</dd>
+            </div>
+          </dl>
+          <details class="tooling">
+            <summary>Base tecnológica por finalidade</summary>
+            <dl class="tools-list">
+              <div><dt>Desenvolvimento</dt><dd>Python, JavaScript, TypeScript, C#, React, Tailwind CSS, FastAPI, Flask, Node.js e .NET.</dd></div>
+              <div><dt>Dados e BI</dt><dd>SQL, PostgreSQL, Oracle, MySQL, SQLite, Neon, EF Core e Power BI.</dd></div>
+              <div><dt>Automação e operação</dt><dd>n8n, Power Automate, Docker, Docker Compose, Git e GitHub Actions.</dd></div>
+              <div><dt>IA aplicada</dt><dd>Gemini API, saídas estruturadas, engenharia de prompt e contextualização com revisão humana.</dd></div>
+            </dl>
+          </details>
         </div>
       </div>
     </section>
 
-    <!-- Seção: Engenharia de Inteligência Artificial & LLMs (Penúltima seção) -->
-    <section class="section" id="ai-engineering">
+    <section class="section" id="ai-engineering" aria-labelledby="engineering-title">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Engenharia de Inteligência Artificial &amp; LLMs</h2>
-          <p class="section-subtitle">Navegue pelas abas abaixo para explorar minha atuação técnica na construção,
-            integração e operacionalização de sistemas inteligentes e modelos em produção.</p>
+        <span id="services" class="legacy-anchor" aria-hidden="true"></span>
+        <div class="section-heading">
+          <h2 id="engineering-title" class="section-title">Engenharia Aplicada</h2>
+          <p>Decisões de arquitetura, fluxos de dados e algoritmos demonstrados nos projetos.</p>
         </div>
 
-        <div class="ai-tabs-wrapper">
-          <!-- Navegação das Abas de IA -->
-          <div class="ai-tabs-nav" role="tablist" aria-label="Pilares de Engenharia de IA">
-            <button type="button" class="ai-tab-btn active" role="tab" aria-selected="true" data-tab="tab-llms"
-              onclick="switchAITab('tab-llms')">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"></path>
-                <path d="M16 10v1a4 4 0 0 1-8 0v-1"></path>
-                <line x1="12" y1="15" x2="12" y2="22"></line>
-                <line x1="8" y1="22" x2="16" y2="22"></line>
-              </svg>
-              <span>LLMs &amp; Prompt Engineering</span>
-            </button>
-
-            <button type="button" class="ai-tab-btn" role="tab" aria-selected="false" data-tab="tab-active-learning"
-              onclick="switchAITab('tab-active-learning')">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <polyline points="23 4 23 10 17 10"></polyline>
-                <polyline points="1 20 1 14 7 14"></polyline>
-                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-              </svg>
-              <span>Active Learning &amp; HITL</span>
-            </button>
-
-            <button type="button" class="ai-tab-btn" role="tab" aria-selected="false" data-tab="tab-recsys"
-              onclick="switchAITab('tab-recsys')">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="18" cy="5" r="3"></circle>
-                <circle cx="6" cy="12" r="3"></circle>
-                <circle cx="18" cy="19" r="3"></circle>
-                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-              </svg>
-              <span>Recomendação &amp; Grafos</span>
-            </button>
-
-            <button type="button" class="ai-tab-btn" role="tab" aria-selected="false" data-tab="tab-ai-ops"
-              onclick="switchAITab('tab-ai-ops')">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                <line x1="6" y1="18" x2="6.01" y2="18"></line>
-              </svg>
-              <span>Agentes (n8n), APIs &amp; MLOps</span>
-            </button>
+        <div class="engineering-layout">
+          <div class="engineering-tabs" aria-label="Disciplinas de Engenharia Aplicada" hidden>
+            <button id="engineering-architecture" type="button" aria-controls="tab-architecture">Arquitetura e integração</button>
+            <button id="engineering-ai" type="button" aria-controls="tab-llms">Inteligência artificial aplicada</button>
+            <button id="engineering-automation" type="button" aria-controls="tab-automation">Automação e pipelines</button>
+            <button id="engineering-algorithms" type="button" aria-controls="tab-recsys">Algoritmos e recomendação</button>
+            <button id="engineering-quality" type="button" aria-controls="tab-ai-ops">Infraestrutura e qualidade</button>
           </div>
 
-          <!-- Painel 1: LLMs & Prompt Engineering -->
-          <div class="ai-tab-panel active" id="tab-llms" role="tabpanel">
-            <div>
-              <span class="ai-panel-badge">GenAI &bull; Large Language Models</span>
-              <h3 class="ai-panel-title">Orquestração de LLMs, Extração Estruturada &amp; Eficiência de Tokens</h3>
-              <p class="ai-panel-desc">
-                Desenvolvimento de aplicações nativas em IA que transformam textos extensos e não estruturados em
-                decisões acionáveis e esquemas de dados rigorosos, controlando custo, latência e confiabilidade das
-                respostas do modelo.
-              </p>
-              <ul class="ai-panel-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Structured Outputs &amp; Parsing:</strong> Instrução de modelos (Google Gemini API) para
-                    retornar payloads JSON tipados com resumos executivos, scores de aderência, prazos e justificativas
-                    auditáveis.</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Agente Notificador de Alta Aderência (n8n + Docker):</strong> Orquestração autônoma onde o agente avalia o score da IA, filtra oportunidades de alto match e dispara alertas automáticos (Teams/E-mail) com resumo e links diretos pré-filtrados.</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Pré-Filtragem Inteligente (Token Optimization):</strong> Camada heurística e léxica em
-                    Python antes da chamada ao LLM para descartar ruído e reduzir drasticamente o consumo de tokens e a
-                    latência da pipeline.</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Engenharia de Contexto &amp; Grounding:</strong> Construção dinâmica de prompts com
-                    regras de
-                    domínio customizáveis (CRUD de temas e teses de negócio) para mitigar alucinações.</span>
-                </li>
+          <div class="engineering-panels">
+            <div id="tab-architecture" class="engineering-panel">
+              <h3>Limites entre domínio, aplicação e infraestrutura</h3>
+              <p>No ServiCore, o monólito modular permite evoluir as áreas do sistema dentro da mesma aplicação. Clean Architecture e Domain-Driven Design mantêm as regras de negócio isoladas de detalhes de persistência e interface.</p>
+              <ul class="technical-list">
+                <li><strong>Domínio.</strong> As regras e os value objects expressam conceitos e invariantes do negócio.</li>
+                <li><strong>Integração.</strong> As APIs separam o consumo pela interface da implementação interna. OpenAPI e Swagger documentam contratos de serviços REST.</li>
+                <li><strong>Persistência.</strong> EF Core mapeia os dados para SQLite. A infraestrutura concentra os detalhes do banco e a preparação para PostgreSQL.</li>
               </ul>
-              <a href="https://github.com/caioSiqueiraSantos/Buscador-de-Editais" target="_blank"
-                rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1.1rem;">
-                Ver Implementação no GitHub &rarr;
-              </a>
+              <a href="#servicore" class="text-link">Ver estudo de caso do ServiCore</a>
             </div>
 
-            <div class="ai-architecture-box">
-              <div class="ai-arch-header">
-                <span>Pipeline GenAI &amp; Automação</span>
-                <span>Python &bull; n8n &bull; Docker &bull; Gemini</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">01.</span>
-                <span><strong>Agendamento &amp; Ingestão (n8n/Docker):</strong> Disparo de rotina periódica no backend e coleta multi-fonte (FINEP via API e FAPESP via scraping).</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">02.</span>
-                <span><strong>Filtro Léxico (Gatekeeper):</strong> Higienização de texto e corte de itens fora de escopo (economia de ~70% de tokens de LLM).</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">03.</span>
-                <span><strong>Triagem LLM &amp; HITL:</strong> Inferência estruturada (JSON) via Gemini API, Few-Shot dinâmico e persistência no PostgreSQL.</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">04.</span>
-                <span><strong>Agente Notificador de Alta Aderência:</strong> Disparo multicanal (Teams/E-mail) para editais prioritários com link direto pré-filtrado.</span>
-              </div>
+            <div id="tab-llms" class="engineering-panel">
+              <span id="tab-active-learning" class="legacy-anchor" aria-hidden="true"></span>
+              <h3>Extração estruturada e revisão humana</h3>
+              <p>No Buscador de Editais, a Gemini API extrai prazos, resumos, aderência e justificativas em JSON. Regras de domínio e temas cadastrados fornecem contexto à análise, enquanto o filtro léxico anterior à chamada evita inferências sobre itens fora do escopo.</p>
+              <p>Quando um analista reclassifica um edital, sua decisão e justificativa ficam registradas no PostgreSQL. Em análises futuras, exemplos pertinentes são recuperados e incluídos no prompt (few-shot dinâmico). O mecanismo atua no contexto da inferência e mantém os pesos do modelo fixos.</p>
+              <figure class="flow">
+                <figcaption>Ciclo de revisão no Buscador de Editais</figcaption>
+                <ol role="list">
+                  <li>Triagem por Gemini</li>
+                  <li>Revisão do analista</li>
+                  <li>Registro no PostgreSQL</li>
+                  <li>Exemplos no próximo prompt</li>
+                </ol>
+              </figure>
             </div>
-          </div>
 
-          <!-- Painel 2: Active Learning & Human-in-the-Loop -->
-          <div class="ai-tab-panel" id="tab-active-learning" role="tabpanel">
-            <div>
-              <span class="ai-panel-badge">Aprendizado Contínuo &bull; HITL</span>
-              <h3 class="ai-panel-title">Ciclos de Active Learning &amp; Memória Contextual (Human-in-the-Loop)</h3>
-              <p class="ai-panel-desc">
-                Modelos de IA em produção precisam evoluir conforme o especialista humano valida ou corrige suas
-                previsões. Projetei um mecanismo de retroalimentação onde cada interação humana melhora imediatamente as
-                próximas inferências do modelo.
-              </p>
-              <ul class="ai-panel-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Feedback Engine Bidirecional:</strong> Quando um analista reclassifica a aderência de um
-                    item ou registra o motivo de descarte no dashboard, o evento é capturado como exemplo rotulado de
-                    alta qualidade.</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>In-Context Active Learning (Few-Shot Dinâmico):</strong> As correções humanas são
-                    recuperadas do banco de dados e injetadas no prompt do sistema como contraexemplos e referências de
-                    calibração em tempo real.</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Notificação Ativa &amp; Resposta Rápida:</strong> Editais com alta aderência identificados pelo agente disparam alertas imediatos (Teams/E-mail) com links pré-filtrados, direcionando o analista diretamente para a interface de auditoria e calibração.</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Observabilidade &amp; Auditoria de IA:</strong> Rastreabilidade completa do porquê o
-                    modelo tomou determinada decisão versus o ajuste humano, essencial para governança de IA.</span>
-                </li>
+            <div id="tab-automation" class="engineering-panel">
+              <h3>Coleta periódica, triagem e alertas</h3>
+              <p>O n8n orquestra a coleta na API pública da FINEP e no site da FAPESP. O backend em FastAPI higieniza o texto, aplica a pré-filtragem temática e encaminha as oportunidades aderentes para análise estruturada.</p>
+              <p>Após a persistência, os alertas de alta aderência seguem por Teams ou e-mail com o resumo e o prazo. A interface em React dá acesso aos filtros, à consulta da fonte original e à revisão dos resultados.</p>
+              <figure class="flow">
+                <figcaption>Pipeline de editais</figcaption>
+                <ol role="list">
+                  <li>Coleta agendada</li>
+                  <li>Pré-filtragem</li>
+                  <li>Análise estruturada</li>
+                  <li>Persistência e alertas</li>
+                </ol>
+              </figure>
+            </div>
+
+            <div id="tab-recsys" class="engineering-panel">
+              <h3>Filtragem colaborativa e busca em grafos</h3>
+              <p>No GameShop, o grafo bipartido liga usuários aos jogos de suas bibliotecas. A similaridade de Jaccard divide a quantidade de jogos em comum pelo total de jogos distintos nas duas bibliotecas. A afinidade entre perfis, calculada dessa forma, orienta as sugestões do catálogo.</p>
+              <p>O grafo social tem uma finalidade distinta. Uma busca em largura (BFS) limitada a dois níveis localiza conexões indiretas e contabiliza amizades em comum. A interface mostra a origem das sugestões.</p>
+              <a href="#gameshop" class="text-link">Ver estudo de caso do GameShop</a>
+            </div>
+
+            <div id="tab-ai-ops" class="engineering-panel">
+              <h3>Ambientes reproduzíveis e regras verificáveis</h3>
+              <ul class="technical-list">
+                <li><strong>Containerização.</strong> No Buscador de Editais, Docker Compose organiza o ambiente da automação com n8n e torna sua configuração reproduzível.</li>
+                <li><strong>Qualidade.</strong> Testes automatizados verificam regras de domínio no ServiCore. No Buscador de Editais, esquemas de saída estruturada e o registro de revisões ajudam a acompanhar as classificações.</li>
+                <li><strong>Automação de publicação.</strong> O próprio portfólio usa GitHub Actions para empacotar os arquivos estáticos e publicar no GitHub Pages.</li>
               </ul>
-              <a href="https://github.com/caioSiqueiraSantos/Buscador-de-Editais" target="_blank"
-                rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1.1rem;">
-                Explorar Arquitetura HITL &rarr;
-              </a>
-            </div>
-
-            <div class="ai-architecture-box">
-              <div class="ai-arch-header">
-                <span>Ciclo Human-in-the-Loop (HITL)</span>
-                <span>Active Learning Loop</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">A.</span>
-                <span><strong>Predição Inicial:</strong> O LLM classifica a oportunidade (Alta / Média / Baixa) e gera a
-                  justificativa técnica.</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">B.</span>
-                <span><strong>Revisão Humana:</strong> O especialista aprova, altera o nível ou descarta informando o
-                  motivo real de negócio.</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">C.</span>
-                <span><strong>Memória de Aprendizado:</strong> O par
-                  <code>(documento, decisão_humana, justificativa)</code>
-                  é salvo no repositório de calibração.</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">D.</span>
-                <span><strong>Auto-Calibração:</strong> Novas execuções consultam a memória para alinhar o critério do
-                  LLM à visão do time.</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Painel 3: Sistemas de Recomendação & Grafos -->
-          <div class="ai-tab-panel" id="tab-recsys" role="tabpanel">
-            <div>
-              <span class="ai-panel-badge">RecSys &bull; Algoritmos &amp; Grafos</span>
-              <h3 class="ai-panel-title">Motores de Recomendação, Filtragem Colaborativa &amp; Teoria dos Grafos</h3>
-              <p class="ai-panel-desc">
-                Plataformas de alto tráfego e marketplaces dependem de algoritmos eficientes para conectar usuários aos
-                itens certos. Desenvolvi motores de recomendação baseados em estruturas de grafos para personalização de
-                catálogo e descoberta social.
-              </p>
-              <ul class="ai-panel-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Grafo Bipartido (Usuário–Item):</strong> Modelagem das interações e bibliotecas de
-                    usuários como arestas ponderadas para identificar padrões de consumo compartilhados.</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Filtragem Colaborativa &amp; Scoring de Similaridade:</strong> Ranqueamento de produtos
-                    não adquiridos com base no peso de afinidade entre perfis vizinhos no grafo.</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Busca em Largura (BFS em Profundidade 2):</strong> Travessia eficiente em grafo para
-                    recomendação de conexões indiretas (amigos de amigos) com complexidade controlada.</span>
-                </li>
-              </ul>
-              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <a href="https://game-shop-rho-beryl.vercel.app/" target="_blank" rel="noopener noreferrer"
-                  class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1.1rem;">
-                  Testar Recomendação Online &rarr;
-                </a>
-                <a href="https://github.com/caioSiqueiraSantos/GameShop" target="_blank" rel="noopener noreferrer"
-                  class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.6rem 1.1rem;">
-                  Código-Fonte
-                </a>
-              </div>
-            </div>
-
-            <div class="ai-architecture-box">
-              <div class="ai-arch-header">
-                <span>Graph Recommender Engine</span>
-                <span>BFS &bull; Collaborative Filtering</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">G1.</span>
-                <span><strong>Vértices &amp; Arestas:</strong> Grafo social <code>Gs = (U, Eu)</code> acoplado ao grafo
-                  bipartido
-                  de consumo <code>Gb = (U &cup; I, Ei)</code>.</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">G2.</span>
-                <span><strong>Travessia BFS (<code>d = 2</code>):</strong> Identifica vizinhos de 2º grau e contabiliza
-                  conexões em
-                  comum para sugerir novas amizades.</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">G3.</span>
-                <span><strong>Afinidade Colaborativa:</strong> Calcula interseção de itens entre usuários similares e
-                  projeta recomendações personalizadas.</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">G4.</span>
-                <span><strong>Explicabilidade na UI:</strong> Exibe ao usuário o motivo exato de cada recomendação
-                  gerada
-                  pelo grafo.</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Painel 4: Pipelines, APIs & MLOps -->
-          <div class="ai-tab-panel" id="tab-ai-ops" role="tabpanel">
-            <div>
-              <span class="ai-panel-badge">AI Software Engineering &bull; MLOps</span>
-              <h3 class="ai-panel-title">Engenharia de Software Sólida para Operacionalizar Modelos em Escala</h3>
-              <p class="ai-panel-desc">
-                Um modelo de IA só gera impacto quando está integrado a uma arquitetura de software confiável, testável
-                e fácil de manter. Uno a ciência da computação às melhores práticas de engenharia de produção.
-              </p>
-              <ul class="ai-panel-list">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>APIs Assíncronas para IA:</strong> Construção de serviços RESTful com <strong>FastAPI
-                      (Python)</strong>, <strong>Node.js</strong> e <strong>.NET 8 (C#)</strong> documentados com
-                    OpenAPI/Swagger.</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Orquestração de Agentes com n8n &amp; Docker:</strong> Configuração de workflows agendados (Cron), gatilhos por webhook e orquestração em containers Docker para execução periódica de agentes de busca e notificação multicanal (Teams/E-mail).</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Modelagem de Dados &amp; Persistência:</strong> Estruturação de históricos de
-                    inferência,
-                    feedbacks, logs de auditoria e dados transacionais em <strong>PostgreSQL</strong>, MySQL e
-                    SQLite.</span>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span><strong>Containerização &amp; CI/CD:</strong> Ambientes reproduzíveis com <strong>Docker Compose</strong>, builds multi-stage e automação de pipelines contínuos via GitHub Actions.</span>
-                </li>
-              </ul>
-              <a href="https://github.com/caioSiqueiraSantos/Buscador-de-Editais" target="_blank" rel="noopener noreferrer"
-                class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1.1rem;">
-                Ver Arquitetura de Agentes no GitHub &rarr;
-              </a>
-            </div>
-
-            <div class="ai-architecture-box">
-              <div class="ai-arch-header">
-                <span>Stack de Produção &amp; Engenharia</span>
-                <span>Clean Code &bull; Docker &bull; Cloud</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">API</span>
-                <span><strong>Backend &amp; Orquestração:</strong> Python (FastAPI), n8n Workflows, C# (.NET 8 Clean Architecture) e Node.js.</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">DATA</span>
-                <span><strong>Persistência &amp; Pipelines:</strong> PostgreSQL 16, SQLite, ETL automatizado e validação de schemas.</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">OPS</span>
-                <span><strong>Infra &amp; Containers:</strong> Docker Compose, n8n automações, GitHub Actions e preparação para nuvem Azure.</span>
-              </div>
-              <div class="ai-arch-step">
-                <span class="ai-arch-num">UI</span>
-                <span><strong>Observabilidade &amp; Produto:</strong> Dashboards interativos em React 19, TypeScript e Tailwind CSS.</span>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Seção de Contato (Layout Split Screen Moderno e Minimalista) -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-split-grid">
-          <!-- Coluna da Esquerda: Informações e Redes -->
-          <div class="contact-info-side">
-            <div class="contact-indicator-line"></div>
-            <h2 class="contact-main-heading">Entre em <span class="highlight">Contato</span></h2>
-            <p class="contact-lead-sub">Disponível para oportunidades em AI Engineering, GenAI &amp; Engenharia de
-              Software.</p>
-
-            <h3 class="contact-secondary-heading">Vamos construir o futuro com IA?</h3>
-            <p class="contact-text-body">
-              Seja para integrar sua equipe de <strong>Engenharia de IA / GenAI</strong> (estágio, residência técnica ou
-              desenvolvimento de software) ou para colaborar em soluções inteligentes baseadas em LLMs, pipelines de
-              dados e algoritmos, estou à disposição para conversar.
-            </p>
-
-            <!-- Contato Direto Visível -->
-            <div class="contact-direct-card" id="contact-email-card"
-              title="E-mail profissional de Caio Siqueira Santos">
-              <div class="contact-direct-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg>
-              </div>
-              <div class="contact-direct-content">
-                <span class="contact-direct-label">E-mail profissional</span>
-                <span class="contact-direct-email" id="contact-email-value">caio.siqueira.dev@gmail.com</span>
-              </div>
-            </div>
-
-            <div class="contact-actions-cluster">
-              <div class="social-buttons" aria-label="Acesso Rápido e Redes Profissionais">
-
-                <a href="https://github.com/caioSiqueiraSantos" target="_blank" rel="noopener noreferrer"
-                  class="btn-social" id="contact-link-github" title="Acessar perfil no GitHub">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                  </svg>
-                  <span>GitHub</span>
-                </a>
-
-                <a href="https://linkedin.com/in/caio-siqueira-santos" target="_blank" rel="noopener noreferrer"
-                  class="btn-social" id="contact-link-linkedin" title="Acessar perfil no LinkedIn">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                  </svg>
-                  <span>LinkedIn</span>
-                </a>
-
-                <a href="https://wa.me/5511966935424?text=Ol%C3%A1%2C%20Caio!%20Vi%20seu%20portf%C3%B3lio%20de%20AI%20Engineer%20e%20gostaria%20de%20conversar."
-                  target="_blank" rel="noopener noreferrer" class="btn-social btn-whatsapp" id="contact-link-whatsapp"
-                  title="Falar diretamente pelo WhatsApp (+55 11 96693-5424)">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-                  </svg>
-                  <span>WhatsApp</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Coluna da Direita: Formulário de Mensagem -->
-          <div class="contact-form-side">
-            <div class="contact-form-card">
-              <form id="contact-form" novalidate>
-                <div class="form-group">
-                  <label for="name" class="form-label">Nome</label>
-                  <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome ou empresa"
-                    required>
-                </div>
-
-                <div class="form-group">
-                  <label for="email" class="form-label">E-mail</label>
-                  <input type="email" id="email" name="email" class="form-input" placeholder="seu-email@dominio.com"
-                    required>
-                </div>
-
-                <div class="form-group">
-                  <label for="message" class="form-label">Mensagem</label>
-                  <textarea id="message" name="message" class="form-textarea"
-                    placeholder="Conte sobre a oportunidade em Engenharia de IA / GenAI ou sobre seu projeto..."
-                    required></textarea>
-                </div>
-
-                <button type="submit" id="submit-btn" class="btn btn-primary btn-submit">
-                  Enviar mensagem
-                </button>
-
-                <div id="form-alert" class="alert-box" role="status" aria-live="polite"></div>
-              </form>
-            </div>
+    <section class="section section-tint" id="contact" aria-labelledby="contact-title">
+      <div class="container editorial-grid contact-grid">
+        <div class="contact-copy">
+          <h2 id="contact-title" class="section-title">Vamos conversar sobre tecnologia?</h2>
+          <p>Estou aberto a oportunidades de estágio e posições júnior em engenharia de software, tecnologia e inovação. Busco ambientes que valorizem aprendizado contínuo, colaboração e soluções para necessidades reais.</p>
+          <div class="contact-links">
+            <address><a class="contact-email" href="mailto:caio.siqueira.dev@gmail.com">caio.siqueira.dev@gmail.com</a></address>
+            <ul class="inline-links">
+              <li><a href="https://linkedin.com/in/caio-siqueira-santos" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="https://github.com/caioSiqueiraSantos" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a id="contact-link-whatsapp" href="https://wa.me/5511966935424?text=Ol%C3%A1%2C%20Caio%21%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            </ul>
           </div>
         </div>
+        <form class="contact-form" id="contact-form" aria-labelledby="form-title" hidden>
+          <h3 id="form-title">Envie uma mensagem</h3>
+          <div class="form-field">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" id="submit-btn" class="button button-primary">Enviar mensagem</button>
+          <p id="form-alert" class="form-feedback" role="status"></p>
+        </form>
       </div>
     </section>
   </main>
 
-  <!-- Rodapé -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Caio Siqueira Santos &bull; AI Engineer &amp; Desenvolvedor Full Stack (GenAI &bull; LLMs &bull;
-        Python)</p>
+  <footer class="site-footer section-inverse">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="#about">
+          <span class="brand-mark" aria-hidden="true">CS<span>.</span></span>
+          <span>Caio Siqueira Santos</span>
+        </a>
+        <p>Engenharia de Software &amp; Tecnologia</p>
+        <p>Sistemas · Inovação · Inteligência Artificial</p>
+      </div>
+      <nav aria-label="Links do rodapé">
+        <ul class="inline-links">
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#contact">Contato</a></li>
+          <li><a href="#about">Voltar ao topo</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">© <span id="copyright-year">2026</span> Caio Siqueira Santos</p>
     </div>
   </footer>
-
-  <!-- Botão Flutuante de Contato Rápido WhatsApp -->
-  <a href="https://wa.me/5511966935424?text=Ol%C3%A1%2C%20Caio!%20Vi%20seu%20portf%C3%B3lio%20de%20AI%20Engineer%20e%20gostaria%20de%20conversar."
-    target="_blank" rel="noopener noreferrer" class="floating-whatsapp" id="floating-whatsapp"
-    aria-label="Falar com Caio no WhatsApp" title="Falar no WhatsApp (+55 11 96693-5424)">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-    </svg>
-    <span class="floating-whatsapp-tooltip">Conversar no WhatsApp</span>
-  </a>
-
-  <!-- Scripts -->
-  <script src="js/main.js" defer></script>
 </body>
-
 </html>
